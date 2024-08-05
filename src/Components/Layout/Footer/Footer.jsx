@@ -1,4 +1,4 @@
-import footerLogo from "../../../assets/footerLogo.png";
+// import footerLogo from "../../../assets/footerLogo.png";
 import { FaFacebook, FaRedditAlien, FaRss } from "react-icons/fa";
 import { IoLogoTwitter } from "react-icons/io";
 const Footer = () => {
@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className='footer footer-center p-10 bg-[#0E1E32] text-primary-content max-w-[1920px]'>
       <div className='max-w-[1133px] h-auto md:h-[117px] mx-auto flex flex-col md:flex-row justify-center md:justify-between items-center'>
         <div className='flex flex-col items-center gap-5 h-auto w-[189px] md:h-[107px]'>
-          <img src={footerLogo} alt='nbc_logo' className='w-[66px] h-10' />
+          <img  alt='nbc_logo' className='w-[66px] h-10' />
           <h4 className='text-white text-xs'>
             copyright &copy; 2020 | NBC NEWS
           </h4>

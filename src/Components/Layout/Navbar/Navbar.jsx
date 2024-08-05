@@ -1,67 +1,29 @@
 import { useState, useRef, useEffect } from "react";
 import { FaBarsStaggered } from "react-icons/fa6";
-import { IoMdClose } from "react-icons/io";
 import { Link } from "react-router-dom";
 import TopNavInfo from "./TopNavInfo";
+import MobileSidebar from "./MobileSlider";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [hoveredCategory, setHoveredCategory] = useState(null);
-  const [dropdownOpen, setDropdownOpen] = useState(false);
-  const [navLink, setNavLink] = useState([
-    { name: "Home", value: "home", active: true },
-    {
-      name: "Study Abroad",
-      value: "study_abroad",
-      subCategory: [
-        { id: 1, name: "USA", value: "usa" },
-        { id: 2, name: "UK", value: "uk" },
-        { id: 3, name: "Australia", value: "australia" },
-        { id: 4, name: "Sweden", value: "sweden" },
-        { id: 5, name: "Denmark", value: "denmark" },
-        { id: 6, name: "Hungary", value: "hungary" },
-        { id: 7, name: "Czech Republic", value: "czech_republic" },
-      ],
-      active: false,
-    },
-    {
-      name: "Job Visa Processing",
-      value: "job_visa_processing",
-      active: false,
-    },
-    {
-      name: "Tourist Visa Processing",
-      value: "tourist_visa_processing",
-      active: false,
-    },
-    { name: "About Us", value: "aboutUs", active: false },
-    { name: "Contact Us", value: "contactUs", active: false },
-  ]);
+  const [dropDownState, setDropDownState] = useState(false);
+  const dropDownMenuRef = useRef();
 
-  const closeTimer = useRef(null);
-
-  const handleNavClick = (idx) => {
-    const updatedNavLink = navLink.map((nav, index) => {
-      if (index === idx) {
-        return { ...nav, active: true };
+  useEffect(() => {
+    const closeDropDown = (e) => {
+      if (
+        dropDownMenuRef.current &&
+        !dropDownMenuRef.current.contains(e.target)
+      ) {
+        setDropDownState(false);
       }
-      return { ...nav, active: false };
-    });
-    setNavLink(updatedNavLink);
-  };
+    };
+    document.addEventListener("mousedown", closeDropDown);
+    return () => {
+      document.removeEventListener("mousedown", closeDropDown);
+    };
+  }, []);
 
-  const handleMouseEnter = (idx) => {
-    setDropdownOpen(true);
-    clearTimeout(closeTimer.current);
-    setHoveredCategory(idx);
-  };
-
-  const handleMouseLeave = () => {
-    closeTimer.current = setTimeout(() => {
-      setHoveredCategory(null);
-    }, 300);
-    setDropdownOpen(false);
-  };
   const [scrollY, setScrollY] = useState(0);
   const handleScroll = () => {
     setScrollY(window.scrollY);
@@ -73,67 +35,21 @@ const Navbar = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
   return (
     <nav
-      className={`h-20 max-w-[1920px] mx-auto sticky ${
+      className={`h-30 mb-10 max-w-[1920px] mx-auto sticky ${
         scrollY > 0
           ? "top-0 transition-all duration-300"
           : "top-10 transition-all duration-500"
       } z-20 shadow-lg`}
     >
-      <TopNavInfo></TopNavInfo>
+      <TopNavInfo />
       <div className='flex bg-navBg'>
-        {/* Start Mobile View navbar  */}
-        <div
-          className={`fixed z-[100] inset-0 bg-black/20 backdrop-blur-sm min-h-screen duration-300 ${
-            isOpen ? "opacity-100 visible" : "opacity-0 invisible"
-          }`}
-          onClick={() => setIsOpen(false)}
-        >
-          <div
-            className={`absolute min-h-full w-80 right-0 top-0 min-w-96 rounded-lg bg-white pb-5 text-center drop-shadow-2xl transition-transform duration-500 ${
-              isOpen ? "translate-x-0" : "translate-x-full"
-            }`}
-            onClick={(e) => e.stopPropagation()}
-          >
-            <div className='flex justify-between items-center px-5 my-5'>
-              <h1 className='text-sm font-semibold text-customTextColor'>
-                NEW ERA <span className='text-black'>CONSULTANCY</span>
-              </h1>
-              <IoMdClose onClick={() => setIsOpen(!isOpen)} size={25} />
-            </div>
-            <ul className='mt-4 w-full'>
-              {navLink.map((nav, idx) => (
-                <li key={idx} className='relative'>
-                  <div
-                    onClick={() => handleNavClick(idx)}
-                    className={`text-[#2A2A2A] hover:text-[#2A2A2A]/80 cursor-pointer py-3.5 w-full hover:text-customTextColor hover:bg-blue-50 ${
-                      nav.active ? "font-bold" : ""
-                    }`}
-                  >
-                    {nav.name}
-                  </div>
-                  {nav.subCategory && nav.active && (
-                    <ul className='pl-4 transition-all duration-500'>
-                      {nav.subCategory.map((sub) => (
-                        <li
-                          key={sub.id}
-                          className='text-[#2A2A2A] hover:text-[#2A2A2A]/80 cursor-pointer py-2 w-full hover:text-customTextColor hover:bg-blue-50'
-                        >
-                          <Link to={`/study_abroad/${sub.value}`}>
-                            {sub.name}
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-        {/* End Mobile View navbar  */}
-        {/* Start Desktop View navbar  */}
+        {/* Start Mobile View navbar */}
+        <MobileSidebar isOpen={isOpen} setIsOpen={setIsOpen}></MobileSidebar>
+        {/* End Mobile View navbar */}
+        {/* Start Desktop View navbar */}
         <div className='flex-1 flex flex-col'>
           <div className='bg-navBg shadow w-full'>
             <div className='mx-auto'>
@@ -146,52 +62,72 @@ const Navbar = () => {
                 </Link>
 
                 <ul className='md:flex justify-around items-center gap-8 list-none hidden'>
-                  {navLink.map((nav, idx) => (
-                    <li
-                      key={idx}
-                      className='relative group'
-                      onMouseEnter={() => handleMouseEnter(idx)}
-                      onMouseLeave={handleMouseLeave}
-                    >
-                      <div
-                        onClick={() => handleNavClick(idx)}
-                        className={`flex flex-col font-extrabold items-center cursor-pointer ${
-                          nav.active ? "text-gray-500" : "text-black"
-                        }`}
-                      >
-                        {nav.name}
-                        <span className='mt-[2px] h-[3px] w-[0px] rounded-full bg-customBg transition-all duration-300 group-hover:w-full'></span>
-                      </div>
-                      {nav.subCategory && hoveredCategory === idx && (
-                        <ul
-                          className={`${
-                            dropdownOpen ? "visible" : "invisible"
-                          } absolute z-50 w-40 space-y-1 rounded-sm left-0 mt-5`}
-                        >
-                          <span className='absolute -top-2.5 left-[10%] h-0 w-0 -translate-x-1/2 -rotate-[45deg] border-b-[20px] border-r-[20px] border-b-transparent border-r-orange-400'></span>
-                          {nav.subCategory.map((sub, subIdx) => (
-                            <li
-                              key={sub.id}
-                              className={`whitespace-nowrap px-4 py-2 text-gray-700 ${
-                                dropdownOpen
-                                  ? "opacity-100 duration-500"
-                                  : "opacity-0 duration-500"
-                              } rounded-sm bg-customBg text-white cursor-pointer hover:bg-customBg/80`}
-                              style={{
-                                transform: `translateX(${
-                                  dropdownOpen ? 0 : (subIdx + 1) * 20
-                                }px)`,
-                              }}
-                            >
-                              <Link to={`/study_abroad/${sub.value}`}>
-                                {sub.name}
-                              </Link>
-                            </li>
-                          ))}
-                        </ul>
-                      )}
+                  <Link to='/'>
+                    <li className='group flex  cursor-pointer flex-col'>
+                      Home{" "}
+                      <span className='mt-[2px] h-[3px] w-[0px] rounded-full bg-customBg transition-all duration-300 group-hover:w-full'></span>
                     </li>
-                  ))}
+                  </Link>
+                  <li className='relative group' ref={dropDownMenuRef}>
+                    <button
+                      onClick={() => setDropDownState(!dropDownState)}
+                      className='relative flex flex-col items-center py-2'
+                    >
+                      Study Abroad{" "}
+                      <span className='mt-[2px] h-[3px] w-[0px] rounded-full bg-customBg transition-all duration-300 group-hover:w-full'></span>
+                    </button>
+                    {dropDownState && (
+                      <ul className='absolute top-12 z-10 space-y-2 rounded-lg bg-customBg whitespace-nowrap px-4 py-2 text-gray-100'>
+                        <li className='px-3 hover:underline cursor-pointer'>
+                          <Link to='/study_abroad/usa'>USA</Link>
+                        </li>
+                        <li className='px-3 hover:underline cursor-pointer'>
+                          <Link to='/study_abroad/uk'>UK</Link>
+                        </li>
+                        <li className='px-3 hover:underline cursor-pointer'>
+                          <Link to='/study_abroad/australia'>Australia</Link>
+                        </li>
+                        <li className='px-3 hover:underline cursor-pointer'>
+                          <Link to='/study_abroad/sweden'>Sweden</Link>
+                        </li>
+                        <li className='px-3 hover:underline cursor-pointer'>
+                          <Link to='/study_abroad/denmark'>Denmark</Link>
+                        </li>
+                        <li className='px-3 hover:underline cursor-pointer'>
+                          <Link to='/study_abroad/hungary'>Hungary</Link>
+                        </li>
+                        <li className='px-3 hover:underline cursor-pointer'>
+                          <Link to='/study_abroad/czech_republic'>
+                            Czech Republic
+                          </Link>
+                        </li>
+                      </ul>
+                    )}
+                  </li>
+                  <Link to='#'>
+                    <li className='group flex  cursor-pointer flex-col'>
+                      Job Visa Processing{" "}
+                      <span className='mt-[2px] h-[3px] w-[0px] rounded-full bg-customBg transition-all duration-300 group-hover:w-full'></span>
+                    </li>
+                  </Link>
+                  <Link to='#'>
+                    <li className='group flex  cursor-pointer flex-col'>
+                      Tourist Visa Processing{" "}
+                      <span className='mt-[2px] h-[3px] w-[0px] rounded-full bg-customBg transition-all duration-300 group-hover:w-full'></span>
+                    </li>
+                  </Link>
+                  <Link to='/aboutUs'>
+                    <li className='group flex  cursor-pointer flex-col'>
+                      About{" "}
+                      <span className='mt-[2px] h-[3px] w-[0px] rounded-full bg-customBg transition-all duration-300 group-hover:w-full'></span>
+                    </li>
+                  </Link>
+                  <Link to='#'>
+                    <li className='group flex  cursor-pointer flex-col'>
+                      Contact{" "}
+                      <span className='mt-[2px] h-[3px] w-[0px] rounded-full bg-customBg transition-all duration-300 group-hover:w-full'></span>
+                    </li>
+                  </Link>
                 </ul>
 
                 <div className='relative flex items-center justify-center gap-5'>
@@ -206,7 +142,7 @@ const Navbar = () => {
             </div>
           </div>
         </div>
-        {/* End Desktop View navbar  */}
+        {/* End Desktop View navbar */}
       </div>
     </nav>
   );

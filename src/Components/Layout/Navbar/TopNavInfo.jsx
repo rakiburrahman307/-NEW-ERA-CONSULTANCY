@@ -14,7 +14,7 @@ const TopNavInfo = () => {
   }, []);
   return (
     <div
-      className={`bg-customBg h-10 px-5 md:px-20 flex items-center justify-between fixed w-full top-0 transition-transform duration-300 ${
+      className={`max-w-[1366px] bg-customBg w-full mx-auto h-10 px-5 md:px-20 flex items-center justify-between fixed top-0 transition-transform duration-300 ${
         scrollY > 50 ? "-translate-y-full" : "translate-y-0"
       }`}
     >
