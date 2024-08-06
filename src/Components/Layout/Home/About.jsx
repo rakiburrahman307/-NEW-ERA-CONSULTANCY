@@ -6,19 +6,21 @@ const About = () => {
 
 
   return (
-    <div className='container mx-auto flex flex-col md:flex-row items-center p-6 overflow-x-hidden'>
-      <div
+    <div className='container mx-auto flex flex-col md:flex-row gap-5 items-center p-6 overflow-x-hidden'>
+     <div
         className='w-full md:w-1/2'
         data-aos='fade-right'
         data-aos-duration='1000'
       >
+     <div className="bg-customBg w-full h-[380px] relative">
         <img
           src={aboutImage}
           alt='About Us'
-          className='object-cover w-full h-full rounded-lg shadow-lg'
+          className='object-cover md:ml-5 md:mt-5 absolute w-full h-full rounded-lg shadow-lg'
           loading='lazy'
         />
       </div>
+     </div>
       <div
         className='w-full md:w-1/2 mt-6 md:mt-0 md:ml-6'
         data-aos='fade-left'

@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { FaBarsStaggered } from "react-icons/fa6";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import TopNavInfo from "./TopNavInfo";
 import MobileSidebar from "./MobileSlider";
 
@@ -25,16 +25,33 @@ const Navbar = () => {
   }, []);
 
   const [scrollY, setScrollY] = useState(0);
-  const handleScroll = () => {
-    setScrollY(window.scrollY);
-  };
 
   useEffect(() => {
+    const handleScroll = () => setScrollY(window.scrollY);
     window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const menuItems = [
+    { label: "Home", link: "/" },
+    {
+      label: "Study Abroad",
+      dropdown: true,
+      submenu: [
+        { label: "USA", link: "/study_abroad/usa" },
+        { label: "UK", link: "/study_abroad/uk" },
+        { label: "Australia", link: "/study_abroad/australia" },
+        { label: "Sweden", link: "/study_abroad/sweden" },
+        { label: "Denmark", link: "/study_abroad/denmark" },
+        { label: "Hungary", link: "/study_abroad/hungary" },
+        { label: "Czech Republic", link: "/study_abroad/czech_republic" },
+      ],
+    },
+    { label: "Job Visa Counselling", link: "/jobVisaCounselling" },
+    { label: "Tourist Visa Processing", link: "/touristVisaProcessing" },
+    { label: "About", link: "/aboutUs" },
+    { label: "Contact", link: "#" },
+  ];
 
   return (
     <nav
@@ -46,94 +63,70 @@ const Navbar = () => {
     >
       <TopNavInfo />
       <div className='flex bg-navBg'>
-        {/* Start Mobile View navbar */}
-        <MobileSidebar isOpen={isOpen} setIsOpen={setIsOpen}></MobileSidebar>
-        {/* End Mobile View navbar */}
-        {/* Start Desktop View navbar */}
+        {/* Mobile Sidebar */}
+        <MobileSidebar isOpen={isOpen} setIsOpen={setIsOpen} />
+
+        {/* Desktop Navbar */}
         <div className='flex-1 flex flex-col'>
           <div className='bg-navBg shadow w-full'>
             <div className='mx-auto'>
-              <div className='flex justify-between items-center py-4 px-2 max-w-[1366px] mx-auto'>
+              <div className='flex justify-between items-center py-4 px-5 max-w-[1366px] mx-auto'>
                 <Link to='/'>
-                  <h2 className='text-base text font-bold text-customTextColor'>
+                  <h2 className='text-base font-bold text-customTextColor'>
                     NEW ERA <br />
                     <span className='text-xl text-black'>CONSULTANCY</span>
                   </h2>
                 </Link>
 
                 <ul className='md:flex justify-around items-center gap-8 list-none hidden'>
-                  <Link to='/'>
-                    <li className='group flex  cursor-pointer flex-col'>
-                      Home{" "}
-                      <span className='mt-[2px] h-[3px] w-[0px] rounded-full bg-customBg transition-all duration-300 group-hover:w-full'></span>
-                    </li>
-                  </Link>
-                  <li className='relative group' ref={dropDownMenuRef}>
-                    <button
-                      onClick={() => setDropDownState(!dropDownState)}
-                      className='relative flex flex-col items-center py-2'
+                  {menuItems?.map((item, index) => (
+                    <li
+                      key={index}
+                      className='relative group flex cursor-pointer flex-col'
+                      ref={item?.dropdown ? dropDownMenuRef : null}
                     >
-                      Study Abroad{" "}
-                      <span className='mt-[2px] h-[3px] w-[0px] rounded-full bg-customBg transition-all duration-300 group-hover:w-full'></span>
-                    </button>
-                    {dropDownState && (
-                      <ul className='absolute top-12 z-10 space-y-2 rounded-lg bg-customBg whitespace-nowrap px-4 py-2 text-gray-100'>
-                        <li className='px-3 hover:underline cursor-pointer'>
-                          <Link to='/study_abroad/usa'>USA</Link>
-                        </li>
-                        <li className='px-3 hover:underline cursor-pointer'>
-                          <Link to='/study_abroad/uk'>UK</Link>
-                        </li>
-                        <li className='px-3 hover:underline cursor-pointer'>
-                          <Link to='/study_abroad/australia'>Australia</Link>
-                        </li>
-                        <li className='px-3 hover:underline cursor-pointer'>
-                          <Link to='/study_abroad/sweden'>Sweden</Link>
-                        </li>
-                        <li className='px-3 hover:underline cursor-pointer'>
-                          <Link to='/study_abroad/denmark'>Denmark</Link>
-                        </li>
-                        <li className='px-3 hover:underline cursor-pointer'>
-                          <Link to='/study_abroad/hungary'>Hungary</Link>
-                        </li>
-                        <li className='px-3 hover:underline cursor-pointer'>
-                          <Link to='/study_abroad/czech_republic'>
-                            Czech Republic
-                          </Link>
-                        </li>
-                      </ul>
-                    )}
-                  </li>
-                  <Link to='#'>
-                    <li className='group flex  cursor-pointer flex-col'>
-                      Job Visa Processing{" "}
-                      <span className='mt-[2px] h-[3px] w-[0px] rounded-full bg-customBg transition-all duration-300 group-hover:w-full'></span>
+                      {item?.dropdown ? (
+                        <>
+                          <button
+                            onClick={() => setDropDownState(!dropDownState)}
+                            className='relative flex flex-col items-center py-2'
+                          >
+                            {item?.label}
+                            <span className='mt-[2px] h-[3px] w-[0px] rounded-full bg-customBg transition-all duration-300 group-hover:w-full'></span>
+                          </button>
+                          {dropDownState && (
+                            <ul className='absolute top-12 z-10 space-y-2 rounded-lg bg-customBg whitespace-nowrap px-4 py-2 text-gray-100'>
+                              {item.submenu.map((subItem, subIndex) => (
+                                <li
+                                  key={subIndex}
+                                  className='px-3 hover:underline'
+                                >
+                                  <Link to={subItem?.link}>{subItem?.label}</Link>
+                                </li>
+                              ))}
+                            </ul>
+                          )}
+                        </>
+                      ) : (
+                        <NavLink 
+                        className={({ isActive }) => `${
+                          isActive && `text-orange-500 animate-pulse`
+                        }`}
+                         to={item?.link}>
+                          <li className='group flex cursor-pointer flex-col'>
+                            {item?.label}
+                            <span className='mt-[2px] h-[3px] w-[0px] rounded-full bg-customBg transition-all duration-300 group-hover:w-full'></span>
+                          </li>
+                        </NavLink>
+                      )}
                     </li>
-                  </Link>
-                  <Link to='#'>
-                    <li className='group flex  cursor-pointer flex-col'>
-                      Tourist Visa Processing{" "}
-                      <span className='mt-[2px] h-[3px] w-[0px] rounded-full bg-customBg transition-all duration-300 group-hover:w-full'></span>
-                    </li>
-                  </Link>
-                  <Link to='/aboutUs'>
-                    <li className='group flex  cursor-pointer flex-col'>
-                      About{" "}
-                      <span className='mt-[2px] h-[3px] w-[0px] rounded-full bg-customBg transition-all duration-300 group-hover:w-full'></span>
-                    </li>
-                  </Link>
-                  <Link to='#'>
-                    <li className='group flex  cursor-pointer flex-col'>
-                      Contact{" "}
-                      <span className='mt-[2px] h-[3px] w-[0px] rounded-full bg-customBg transition-all duration-300 group-hover:w-full'></span>
-                    </li>
-                  </Link>
+                  ))}
                 </ul>
 
-                <div className='relative flex items-center justify-center gap-5'>
+                <div className='relative flex items-center justify-center gap-5 md:hidden'>
                   <button
                     onClick={() => setIsOpen(!isOpen)}
-                    className='w-5 h-6 flex items-center md:hidden '
+                    className='w-5 h-6 flex items-center'
                   >
                     <FaBarsStaggered />
                   </button>
@@ -142,7 +135,6 @@ const Navbar = () => {
             </div>
           </div>
         </div>
-        {/* End Desktop View navbar */}
       </div>
     </nav>
   );

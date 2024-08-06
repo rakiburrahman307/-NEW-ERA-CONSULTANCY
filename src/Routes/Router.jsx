@@ -5,6 +5,8 @@ import App from "../App";
 import AboutFull from "../Pages/About/AboutFull";
 import Details from "../Pages/DetailsPage/Details";
 import ContactUs from "../Pages/ContactUs/ContactUs";
+import TouristVisaProcessing from "../Pages/TouristVisaProcessing/TouristVisaProcessing";
+import JobVisaCounselling from "../Pages/JobVisaCounselling/JobVisaCounselling";
 
 
 const router = createBrowserRouter([
@@ -24,6 +26,14 @@ const router = createBrowserRouter([
       {
         path: "/contactUs",
         element: <ContactUs />,
+      },
+      {
+        path: "/touristVisaProcessing",
+        element: <TouristVisaProcessing />,
+      },
+      {
+        path: "/jobVisaCounselling",
+        element: <JobVisaCounselling />,
       },
       {
         path: "/study_abroad/:value",

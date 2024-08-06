@@ -78,10 +78,10 @@ const AboutFull = () => {
         </div>
       </div>
       <Parallax
-        blur={10}
+        blur={{ min: -1, max: 3 }}
         bgImage={img7}
         bgImageAlt='Vision Background'
-        strength={200}
+        strength={500}
       >
         {/* Section 2: Right Content, Left Image */}
         <div className='flex flex-col md:flex-row items-center p-8'>
