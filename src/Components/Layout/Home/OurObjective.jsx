@@ -1,4 +1,3 @@
-
 import { TypeAnimation } from 'react-type-animation';
 
 const OurObjective = () => {
@@ -16,7 +15,7 @@ const OurObjective = () => {
               10000,
               '',
             ]}
-            wrapper="p"
+            wrapper="article"
             speed={80}
             cursor={false}
             repeat={Infinity}

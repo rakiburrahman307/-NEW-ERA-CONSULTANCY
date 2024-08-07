@@ -46,7 +46,7 @@ const MobileSidebar = ({ isOpen, setIsOpen }) => {
     { label: "Job Visa Counselling", link: "/jobVisaCounselling" },
     { label: "Tourist Visa Processing", link: "/touristVisaProcessing" },
     { label: "About", link: "/aboutUs" },
-    { label: "Contact", link: "#" },
+    { label: "Contact", link: "/contactUs" },
   ];
 
   return (

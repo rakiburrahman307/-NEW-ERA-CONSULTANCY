@@ -1,10 +1,5 @@
-import { Parallax } from "react-parallax";
 import fullBanner from "../../assets/banner/1.jpg";
 import img1 from "../../assets/banner/6.jpg";
-import img2 from "../../assets/banner/6.jpg";
-import img3 from "../../assets/banner/6.jpg";
-import img4 from "../../assets/banner/6.jpg";
-import img7 from "../../assets/banner/7.jpg";
 import { Link } from "react-router-dom";
 import Slider from "./Slider";
 
@@ -77,94 +72,7 @@ const AboutFull = () => {
           </p>
         </div>
       </div>
-      <Parallax
-        blur={{ min: -1, max: 3 }}
-        bgImage={img7}
-        bgImageAlt='Vision Background'
-        strength={500}
-      >
-        {/* Section 2: Right Content, Left Image */}
-        <div className='flex flex-col md:flex-row items-center p-8'>
-          <div
-            className='md:w-1/2 order-2 md:order-1'
-            data-aos='fade-right'
-            data-aos-duration='1000'
-          >
-            <img
-              src={img2}
-              alt='Mission'
-              className='w-full h-full object-cover'
-            />
-          </div>
-          <div
-            className='md:-ml-5 md:w-1/2 order-1 md:order-2 bg-customBg h-96 py-10 px-20 flex flex-col justify-center'
-            data-aos='fade-left'
-            data-aos-duration='1000'
-          >
-            <h2 className='text-3xl font-bold mb-4 text-white'>Our Mission</h2>
-            <p className='text-lg text-justify'>
-              Our mission is to empower students to achieve their academic goals
-              and unlock their full potential by providing expert guidance and
-              support for studying abroad.
-            </p>
-          </div>
-        </div>
 
-        {/* Section 3: Our Vision with Parallax */}
-
-        <div className='flex flex-col md:flex-row items-center p-8'>
-          <div
-            className='md:-mr-5 md:w-1/2 bg-customBg h-96 py-10 px-20 flex flex-col justify-center'
-            data-aos='fade-right'
-            data-aos-duration='1000'
-          >
-            <h2 className='text-3xl font-bold mb-4 text-white'>Our Vision</h2>
-            <p className='text-lg text-justify'>
-              Our vision is to be the most trusted and respected consultancy
-              firm, helping students worldwide to achieve their dreams of
-              studying abroad and building successful careers.
-            </p>
-          </div>
-          <div
-            className='md:w-1/2'
-            data-aos='fade-left'
-            data-aos-duration='1000'
-          >
-            <img
-              src={img3}
-              alt='Vision'
-              className='w-full h-full object-cover rounded-lg'
-            />
-          </div>
-        </div>
-
-        {/* Section 4: Left Image, Right Content */}
-        <div className='flex flex-col md:flex-row items-center p-8'>
-          <div
-            className='md:w-1/2 order-2 md:order-1'
-            data-aos='fade-right'
-            data-aos-duration='1000'
-          >
-            <img
-              src={img4}
-              alt='Values'
-              className='w-full h-full object-cover rounded-lg'
-            />
-          </div>
-          <div
-            className='md:-ml-5 md:w-1/2 order-1 md:order-2 bg-customBg h-96 py-10 px-20 flex flex-col justify-center'
-            data-aos='fade-left'
-            data-aos-duration='1000'
-          >
-            <h2 className='text-3xl font-bold mb-4 text-white'>Our Values</h2>
-            <p className='text-lg text-justify'>
-              Integrity, excellence, and commitment are at the core of
-              everything we do. We strive to provide the highest quality service
-              to our students and partners.
-            </p>
-          </div>
-        </div>
-      </Parallax>
       {/* Redirect Button to Full About Page */}
       <div className='flex justify-center p-8'>
         <Link

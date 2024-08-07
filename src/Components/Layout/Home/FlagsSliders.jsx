@@ -55,7 +55,6 @@ const FlagsSliders = () => {
     { src: hungaryFlag, alt: "Hungary Flag", name: "Hungary" },
     { src: czechRepublicFlag, alt: "Czech Republic Flag", name: "Czech Republic" },
   ];
-  
 
   return (
     <Parallax
@@ -65,26 +64,26 @@ const FlagsSliders = () => {
       strength={500}
       className='my-10'
     >
-      <div className='slider-container py-10'>
-        <h2 className='text-4xl font-black text-customBg text-center'>
-          Countries We Work
+      <section className='slider-container py-10'>
+        <h2 className='text-4xl font-black text-customBg text-center' data-aos="zoom-in">
+          Countries We Work With
         </h2>
         <Slider {...settings}>
           {flags?.map((flag, index) => (
             <div
               key={index}
-              className='w-60 justify-center h-60 flex items-center'
+              className='w-60 justify-center h-60 flex flex-col items-center'
             >
               <img
                 src={flag?.src}
                 alt={flag?.alt}
                 className='mx-auto w-full h-full object-contain'
               />
-            <p className="text-white whitespace-pre text-center text-xl font-bold">{flag?.name}</p>
+              <p className="text-white text-center text-xl font-bold mt-2">{flag?.name}</p>
             </div>
           ))}
         </Slider>
-      </div>
+      </section>
     </Parallax>
   );
 };

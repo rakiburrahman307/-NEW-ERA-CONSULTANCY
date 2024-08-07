@@ -50,7 +50,7 @@ const Navbar = () => {
     { label: "Job Visa Counselling", link: "/jobVisaCounselling" },
     { label: "Tourist Visa Processing", link: "/touristVisaProcessing" },
     { label: "About", link: "/aboutUs" },
-    { label: "Contact", link: "#" },
+    { label: "Contact", link: "/contactUs" },
   ];
 
   return (
@@ -60,6 +60,7 @@ const Navbar = () => {
           ? "top-0 transition-all duration-300"
           : "top-10 transition-all duration-500"
       } z-20 shadow-lg`}
+      aria-label="Main Navigation"
     >
       <TopNavInfo />
       <div className='flex bg-navBg'>
@@ -71,7 +72,7 @@ const Navbar = () => {
           <div className='bg-navBg shadow w-full'>
             <div className='mx-auto'>
               <div className='flex justify-between items-center py-4 px-5 max-w-[1366px] mx-auto'>
-                <Link to='/'>
+                <Link to='/' aria-label="New Era Consultancy Home">
                   <h2 className='text-base font-bold text-customTextColor'>
                     NEW ERA <br />
                     <span className='text-xl text-black'>CONSULTANCY</span>
@@ -90,16 +91,23 @@ const Navbar = () => {
                           <button
                             onClick={() => setDropDownState(!dropDownState)}
                             className='relative flex flex-col items-center py-2'
+                            aria-expanded={dropDownState}
+                            aria-controls={`submenu-${index}`}
                           >
                             {item?.label}
                             <span className='mt-[2px] h-[3px] w-[0px] rounded-full bg-customBg transition-all duration-300 group-hover:w-full'></span>
                           </button>
                           {dropDownState && (
-                            <ul className='absolute top-12 z-10 space-y-2 rounded-lg bg-customBg whitespace-nowrap px-4 py-2 text-gray-100'>
+                            <ul
+                              id={`submenu-${index}`}
+                              className='absolute top-12 z-10 space-y-2 rounded-lg bg-customBg whitespace-nowrap px-4 py-2 text-gray-100'
+                              role="menu"
+                            >
                               {item.submenu.map((subItem, subIndex) => (
                                 <li
                                   key={subIndex}
                                   className='px-3 hover:underline'
+                                  role="menuitem"
                                 >
                                   <Link to={subItem?.link}>{subItem?.label}</Link>
                                 </li>
@@ -109,10 +117,12 @@ const Navbar = () => {
                         </>
                       ) : (
                         <NavLink 
-                        className={({ isActive }) => `${
-                          isActive && `text-orange-500 animate-pulse`
-                        }`}
-                         to={item?.link}>
+                          className={({ isActive }) => `${
+                            isActive && `text-orange-500 animate-pulse`
+                          }`}
+                          to={item?.link}
+                          role="menuitem"
+                        >
                           <li className='group flex cursor-pointer flex-col'>
                             {item?.label}
                             <span className='mt-[2px] h-[3px] w-[0px] rounded-full bg-customBg transition-all duration-300 group-hover:w-full'></span>
@@ -127,6 +137,7 @@ const Navbar = () => {
                   <button
                     onClick={() => setIsOpen(!isOpen)}
                     className='w-5 h-6 flex items-center'
+                    aria-label="Toggle Mobile Menu"
                   >
                     <FaBarsStaggered />
                   </button>

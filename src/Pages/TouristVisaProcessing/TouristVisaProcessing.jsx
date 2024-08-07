@@ -9,7 +9,7 @@ const countries = [
   "Malaysia",
   "Dubai",
   "UAE",
-  "Saudia Arabia",
+  "Saudi Arabia",
   "Egypt",
   "Japan",
   "Sweden",
@@ -21,7 +21,7 @@ const countries = [
 ];
 
 const documents = [
-  "Valid Passport For at least 6 months from the intended date of travel.",
+  "Valid Passport for at least 6 months from the intended date of travel.",
   "NID",
   "Recent Photographs",
   "Bank Statement",
@@ -32,23 +32,22 @@ const documents = [
 ];
 
 const TouristVisaProcessing = () => {
-
   return (
     <section className="py-16 bg-gradient-to-r from-slate-500 to-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl font-extrabold text-customBg text-center mb-12" data-aos="zoom-in">
+        <h1 className="text-4xl font-extrabold text-customBg text-center mb-12" data-aos="zoom-in">
           Tourist Visa Processing
-        </h2>
+        </h1>
         <div className="grid gap-12 lg:grid-cols-2">
           {/* Countries List */}
-          <div
+          <article
             className="bg-gradient-to-r from-slate-900 to-slate-700 p-8 rounded-lg shadow-lg transition transform hover:shadow-2xl hover:scale-105"
             data-aos="fade-up"
             data-aos-duration="1500"
           >
-            <h3 className="text-3xl font-semibold text-white mb-4">
+            <h2 className="text-3xl font-semibold text-white mb-4">
               Countries We Serve
-            </h3>
+            </h2>
             <ul className="list-decimal list-inside text-white space-y-2">
               {countries.map((country, index) => (
                 <li key={index} className="transition transform hover:scale-105 hover:text-yellow-200 duration-300 ease-in-out">
@@ -56,17 +55,17 @@ const TouristVisaProcessing = () => {
                 </li>
               ))}
             </ul>
-          </div>
+          </article>
           {/* Required Documents */}
-          <div
+          <article
             className="bg-gradient-to-r from-slate-900 to-slate-700 p-8 rounded-lg shadow-lg transition transform hover:shadow-2xl hover:scale-105"
             data-aos="fade-up"
             data-aos-delay="200"
             data-aos-duration="1500"
           >
-            <h3 className="text-3xl font-semibold text-white mb-4">
+            <h2 className="text-3xl font-semibold text-white mb-4">
               Required Documents
-            </h3>
+            </h2>
             <ul className="list-disc list-inside text-white space-y-2">
               {documents.map((document, index) => (
                 <li key={index} className="transition transform hover:scale-105 hover:text-yellow-200 duration-300 ease-in-out">
@@ -74,7 +73,7 @@ const TouristVisaProcessing = () => {
                 </li>
               ))}
             </ul>
-          </div>
+          </article>
         </div>
       </div>
     </section>

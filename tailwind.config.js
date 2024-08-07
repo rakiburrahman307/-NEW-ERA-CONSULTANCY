@@ -5,11 +5,12 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
     'node_modules/flowbite-react/lib/esm/**/*.js'
   ],
+  // "#FCA843"
   theme: {
     extend: {
       colors: {
         customBg: "#FCA843",
-        customTextColor: "#FCA843",
+        customTextColor: "#FFA500",
         navBg: '#F3F3F3', 
         customText: '#333333', 
         customFooter: '#1a1a1a'
