@@ -1,0 +1,338 @@
+{
+  "data": {
+    "usa": [
+      {
+        "why_choose_usa": [
+          "lorem ipsum dolor sit amet tempor inv sapiente vel aug recusandum",
+          "lorem ipsum dolor sit amet tempor inv sapiente vel aug recusandum",
+          "lorem ipsum dolor sit amet tempor inv sapiente vel aug recusandum",
+          "lorem ipsum dolor sit amet tempor inv sapiente vel aug recusandum"
+        ]
+      },
+      {
+        "how_much_cost": [
+          { "key": "sdhjkashd", "value": "ahdshdhhdauisduhsahdauisduhsah" },
+          { "key": "sdhjkashd", "value": "ahdshdhhdauisduhsahdauisduhsah" },
+          { "key": "sdhjkashd", "value": "ahdshdhhdauisduhsahdauisduhsah" }
+        ]
+      },
+      { "living_cost": "Czech Republic" },
+      { "study_cost": "Czech Republic" },
+      {
+        "details": "Czech Republic lorem d Definitions and Information Services Services Services"
+      }
+    ],
+    "uk": [
+      { "about": "https://source.unsplash.com/300x300/?uk" },
+      {
+        "education_system": [
+          {
+            "description": "lorem ipsum d tempor inv sapiente vel aug recus dshd about tempor"
+          },
+          {
+            "point": [
+              { "key": "Key stage 1 :", "value": "5 to 7 years old" },
+              { "key": "Key stage 2 :", "value": "7 to 11 years old" },
+              { "key": "Key stage 3 :", "value": "11 to 14 years old" },
+              { "key": "Key stage 4 :", "value": "14 to 16 years old" }
+            ],
+            "overView_title": "lorem ipsum dolor sit amet, consect",
+            "overview": [
+              {
+                "primary_education": " when an unknown printer took a galley of type and scrambled it to make a type specimen book"
+              },
+              {
+                "secondary_education": "when an unknown printer took a galley of type and scrambled it to make a type specimen book"
+              },
+              {
+                "further_education": " is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been a type specimen book"
+              },
+              {
+                "higher_education": "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "admission_requirement": [
+          {
+            "description": "lorem Ipsum is simply dummy text of the printing and typesetting industry"
+          },
+          {
+            "point": [
+              {
+                "value": "lorem Ipsum and others are the industry's standard dummy"
+              },
+              {
+                "value": "lorem Ipsum and others are the industry's standard dummy"
+              }
+            ]
+          },
+          {
+            "note": " please contact us at new era consultancy personally for further assistance on the above and visa procedure"
+          }
+        ]
+      },
+      {
+        "living_cost": "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy"
+      },
+      {
+        "study_cost": [
+          {
+            "description": "lorem Ipsum is simply dummy text of the printing and typesetting industry"
+          },
+          {
+            "question": "lorem Ipsum is simply dummy text of the printing and typesetting industry ?"
+          },
+          {
+            "point": [
+              { "key": "Key stage 1 :", "value": "5 to 7 years old" },
+              { "key": "Key stage 2 :", "value": "7 to 11 years old" }
+            ]
+          },
+          {
+            "note": "High value courses like medical and veterinary are not included"
+          }
+        ]
+      },
+      {
+        "details": "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy"
+      }
+    ],
+
+    "australia": [
+      { "about": "lorem Ipsum and others are the industry's standard dummy" },
+      {
+        "why_choose_australia": [
+          {
+            "kye": "Top University:",
+            "value": "lorem Ipsum and others are the industry's standard dummy"
+          },
+          {
+            "kye": "Field of Study:",
+            "value": "lorem Ipsum and others are the industry's standard dummy"
+          }
+        ]
+      },
+      {
+        "why_study_australia": [
+          "lorem Ipsum and others are the industry's standard dummy",
+          "lorem Ipsum and others are the industry's standard dummy",
+          "lorem Ipsum and others are the industry's standard dummy",
+          "lorem Ipsum and others are the industry's standard dummy"
+        ]
+      },
+      {
+        "visa_requirement": [
+          "lorem Ipsum and others are the industry's standard dummy",
+          "lorem Ipsum and others are the industry's standard dummy",
+          "lorem Ipsum and others are the industry's standard dummy",
+          "lorem Ipsum and others are the industry's standard dummy",
+          "lorem Ipsum and others are the industry's standard dummy",
+          {
+            "note": "Please contact us at new era consultancy personally for further assistance on the above and visa procedure"
+          }
+        ]
+      },
+      {
+        "other": [
+          "lorem Ipsum and others are the industry's standard dummy",
+          "lorem Ipsum and others are the industry's standard dummy",
+          "lorem Ipsum and others are the industry's standard dummy"
+        ]
+      }
+    ],
+    "sweden": [
+      { "about": "lorem Ipsum and others are the industry's standard dummy" },
+      {
+        "admission_requirement": [
+          {
+            "description": "lorem Ipsum is simply dummy text of the printing and typesetting industry"
+          },
+          {
+            "point": [
+              {
+                "value": "lorem Ipsum and others are the industry's standard dummy"
+              },
+              {
+                "value": "lorem Ipsum and others are the industry's standard dummy"
+              }
+            ]
+          },
+          {
+            "note": "Please contact us at new era consultancy personally for further assistance on the above and visa procedure"
+          }
+        ]
+      },
+      {
+        "requirement": [
+          {
+            "kye": "Undergraduate",
+            "value": "lorem Ipsum and others are the industry's standard dummy"
+          },
+          {
+            "kye": "Postgraduate",
+            "value": "lorem Ipsum and others are the industry's standard dummy"
+          }
+        ]
+      },
+      {
+        "facility": [
+          "Czech Republic Flag",
+          "Czech Republic Flag",
+          "Czech Republic Flag",
+          "Czech Republic Flag"
+        ]
+      },
+      {
+        "living_cost": [
+          {
+            "title": "lorem Ipsum and others are the industry's standard dummy"
+          },
+          {
+            "question": "lorem Ipsum and others are the industry's standard dummy?"
+          },
+          {
+            "point": [
+              { "key": "Key stage 1 :", "value": "5 to 7 years old" },
+              { "key": "Key stage 2 :", "value": "7 to 11 years old" }
+            ]
+          },
+          {
+            "note": "High value courses like medical and veterinary are not included"
+          }
+        ]
+      }
+    ],
+    "denmark": [
+      { "about": "lorem Ipsum and others are the industry's standard dummy" },
+      {
+        "admission_requirement": [
+          {
+            "description": "lorem Ipsum is simply dummy text of the printing and typesetting industry"
+          },
+          {
+            "point": [
+              {
+                "value": "lorem Ipsum and others are the industry's standard dummy"
+              },
+              {
+                "value": "lorem Ipsum and others are the industry's standard dummy"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "facility": [
+          "Czech Republic Flag",
+          "Czech Republic Flag",
+          "Czech Republic Flag",
+          "Czech Republic Flag",
+          "Czech Republic Flag"
+        ]
+      },
+      {
+        "requirement": [
+          {
+            "kye": "Undergraduate",
+            "value": "lorem Ipsum and others are the industry's standard dummy"
+          },
+          {
+            "kye": "Postgraduate",
+            "value": "lorem Ipsum and others are the industry's standard dummy"
+          }
+        ]
+      },
+      { "living_cost": "is simply dummy text of the printing" },
+      { "study_cost": "is simply dummy text of the printing" }
+    ],
+    "hungary": [
+      { "about": "lorem Ipsum and others are the industry's standard dummy" },
+      {
+        "admission_requirement": [
+          {
+            "description": "lorem Ipsum is simply dummy text of the printing and typesetting industry"
+          },
+          {
+            "point": [
+              {
+                "value": "lorem Ipsum and others are the industry's standard dummy"
+              },
+              {
+                "value": "lorem Ipsum and others are the industry's standard dummy"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "facility": [
+          "Czech Republic Flag",
+          "Czech Republic Flag",
+          "Czech Republic Flag",
+          "Czech Republic Flag"
+        ]
+      },
+      {
+        "requirement": [
+          {
+            "kye": "Undergraduate",
+            "value": "lorem Ipsum and others are the industry's standard dummy"
+          },
+          {
+            "kye": "Postgraduate",
+            "value": "lorem Ipsum and others are the industry's standard dummy"
+          }
+        ]
+      },
+      { "living_cost": "Czech Republic" },
+      {
+        "study_cost": [
+          {
+            "kye": "Undergraduate Bachelor Degree",
+            "value": "lorem Ipsum and others are the industry's standard dummy"
+          },
+          {
+            "kye": "Postgraduate Master Degree",
+            "value": "lorem Ipsum and others are the industry's standard dummy"
+          }
+        ]
+      }
+    ],
+    "czech_republic": [
+      { "about": "lorem Ipsum and others are the industry's standard dummy" },
+      {
+        "admission_requirement": [
+          {
+            "description": "lorem Ipsum is simply dummy text of the printing and typesetting industry"
+          },
+          {
+            "point": [
+              {
+                "value": "lorem Ipsum and others are the industry's standard dummy"
+              },
+              {
+                "value": "lorem Ipsum and others are the industry's standard dummy"
+              },
+              {
+                "value": "lorem Ipsum and others are the industry's standard dummy"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "facility": [
+          "Czech Republic Flag",
+          "Czech Republic Flag",
+          "Czech Republic Flag",
+          "Czech Republic Flag"
+        ]
+      },
+      { "living_cost": "Czech Republic" },
+      { "study_cost": "Czech Republic" }
+    ]
+  }
+}

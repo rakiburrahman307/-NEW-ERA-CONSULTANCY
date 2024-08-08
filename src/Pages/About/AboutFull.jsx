@@ -1,9 +1,16 @@
+import { useState } from "react";
+import { Link } from "react-router-dom";
 import fullBanner from "../../assets/banner/1.jpg";
 import img1 from "../../assets/banner/6.jpg";
-import { Link } from "react-router-dom";
 import Slider from "./Slider";
 
 const AboutFull = () => {
+  const [imageLoaded, setImageLoaded] = useState(false);
+
+  const handleImageLoad = () => {
+    setImageLoaded(true);
+  };
+
   return (
     <div className='mt-10'>
       {/* Full-width Banner */}
@@ -12,6 +19,7 @@ const AboutFull = () => {
           src={fullBanner}
           alt='Banner'
           className='w-full h-full object-cover'
+          loading='lazy'
         />
       </div>
 
@@ -32,14 +40,27 @@ const AboutFull = () => {
             finds the best fit for their academic and career goals.
           </p>
         </div>
-        <div className='md:w-1/2' data-aos='fade-left' data-aos-duration='1000'>
-          <img
-            src={img1}
-            alt='About Us'
-            className='w-full h-full object-cover rounded-lg'
-          />
+        <div
+          className='md:w-1/2'
+          data-aos='fade-left'
+          data-aos-duration='1000'
+        >
+          <div
+            className={`relative w-full h-full ${
+              imageLoaded ? "blur-0" : "blur-lg"
+            } transition duration-300 ease-in-out`}
+          >
+            <img
+              src={img1}
+              alt='About Us'
+              className='w-full h-full object-cover rounded-lg'
+              loading='lazy'
+              onLoad={handleImageLoad}
+            />
+          </div>
         </div>
       </div>
+
       {/* Section 2: Right Content, Left Image */}
       <div className='flex justify-between flex-col md:flex-row items-center gap-5 mb-8 px-8 overflow-x-hidden'>
         <div
@@ -47,7 +68,7 @@ const AboutFull = () => {
           data-aos='fade-right'
           data-aos-duration='1000'
         >
-          <Slider></Slider>
+          <Slider />
         </div>
         <div
           className='order-1 md:order-2 py-10 md:px-20 flex flex-col justify-center'
@@ -77,7 +98,7 @@ const AboutFull = () => {
       <div className='flex justify-center p-8'>
         <Link
           to='/'
-          className='inline-flex items-center border border-indigo-300 px-3 py-1.5 rounded-md text-indigo-500 hover:bg-indigo-50'
+          className='inline-flex items-center border border-indigo-300 px-3 py-1.5 rounded-md text-indigo-500 hover:bg-indigo-50 transition-all'
         >
           <svg
             xmlns='http://www.w3.org/2000/svg'

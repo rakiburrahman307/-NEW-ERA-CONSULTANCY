@@ -1,7 +1,10 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import aboutImage from "../../../assets/banner/7.jpg";
 
 const About = () => {
+  const [imageLoaded, setImageLoaded] = useState(false);
+
   return (
     <section className='container mx-auto flex flex-col md:flex-row gap-5 items-center p-6 overflow-x-hidden' aria-labelledby="about-us-heading">
       <div
@@ -13,9 +16,13 @@ const About = () => {
           <img
             src={aboutImage}
             alt='About New Era Consultancy'
-            className='object-cover md:ml-5 md:mt-5 absolute w-full h-full rounded-lg shadow-lg'
+            className={`object-cover md:ml-5 md:mt-5 absolute w-full h-full rounded-lg shadow-lg transition-opacity duration-500 ${imageLoaded ? 'opacity-100' : 'opacity-0'}`}
             loading='lazy'
+            onLoad={() => setImageLoaded(true)}
           />
+          {!imageLoaded && (
+            <div className="absolute inset-0 bg-gray-200 rounded-lg animate-pulse"></div>
+          )}
         </div>
       </div>
       <div

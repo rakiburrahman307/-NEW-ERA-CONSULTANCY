@@ -10,6 +10,7 @@ import swedenFlag from "../../../assets/flags/sweden.png";
 import denmarkFlag from "../../../assets/flags/denmark.png";
 import hungaryFlag from "../../../assets/flags/hungary.png";
 import czechRepublicFlag from "../../../assets/flags/Czech_Republic.png";
+import { useState } from "react";
 
 const FlagsSliders = () => {
   const settings = {
@@ -18,9 +19,9 @@ const FlagsSliders = () => {
     slidesToShow: 4,
     slidesToScroll: 1,
     autoplay: true,
-    speed: 1500,
-    autoplaySpeed: 1000,
-    cssEase: "linear",
+    speed: 1000,
+    autoplaySpeed: 2000,
+    cssEase: "ease-in-out",
     responsive: [
       {
         breakpoint: 1024,
@@ -56,30 +57,44 @@ const FlagsSliders = () => {
     { src: czechRepublicFlag, alt: "Czech Republic Flag", name: "Czech Republic" },
   ];
 
+  const [loadedFlags, setLoadedFlags] = useState([]);
+
+  const handleImageLoad = (index) => {
+    setLoadedFlags((prev) => [...prev, index]);
+  };
+
   return (
     <Parallax
       blur={{ min: -1, max: 3 }}
       bgImage={ParallaxBg}
-      bgImageAlt='Vision Background'
+      bgImageAlt="Vision Background"
       strength={500}
-      className='my-10'
+      className="my-10"
     >
-      <section className='slider-container py-10'>
-        <h2 className='text-4xl font-black text-customBg text-center' data-aos="zoom-in">
+      <section className="slider-container py-10">
+        <h2 className="text-4xl font-black text-customBg text-center mb-8" data-aos="zoom-in">
           Countries We Work With
         </h2>
         <Slider {...settings}>
-          {flags?.map((flag, index) => (
+          {flags.map((flag, index) => (
             <div
               key={index}
-              className='w-60 justify-center h-60 flex flex-col items-center'
+              className="flex flex-col items-center p-4"
+              data-aos="fade-up"
+              data-aos-duration="1000"
             >
-              <img
-                src={flag?.src}
-                alt={flag?.alt}
-                className='mx-auto w-full h-full object-contain'
-              />
-              <p className="text-white text-center text-xl font-bold mt-2">{flag?.name}</p>
+              <div
+                className={`w-60 h-60 relative transition-transform duration-300 ${loadedFlags.includes(index) ? "blur-0" : "blur-lg"}`}
+              >
+                <img
+                  src={flag.src}
+                  alt={flag.alt}
+                  className="w-full h-full object-contain rounded-lg transition duration-500 ease-in-out"
+                  loading="lazy"
+                  onLoad={() => handleImageLoad(index)}
+                />
+              </div>
+              <p className="text-white text-center text-xl font-bold mt-2">{flag.name}</p>
             </div>
           ))}
         </Slider>

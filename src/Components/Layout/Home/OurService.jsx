@@ -1,7 +1,10 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import serviceImage from "../../../assets/banner/4.jpg";
 
 const OurService = () => {
+  const [imageLoaded, setImageLoaded] = useState(false);
+
   return (
     <section className='bg-white py-16 overflow-x-hidden'>
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center md:flex-row md:space-x-8'>
@@ -25,8 +28,13 @@ const OurService = () => {
             <img
               src={serviceImage}
               alt='Representation of our services'
-              className='w-full h-full absolute md:ml-5 md:mt-5 rounded-lg shadow-md'
+              className={`w-full h-full absolute md:ml-5 md:mt-5 rounded-lg shadow-md transition-opacity duration-500 ${imageLoaded ? 'opacity-100' : 'opacity-0'}`}
+              loading='lazy'
+              onLoad={() => setImageLoaded(true)}
             />
+            {!imageLoaded && (
+              <div className="absolute inset-0 bg-gray-200 rounded-lg animate-pulse"></div>
+            )}
           </div>
         </div>
       </div>
