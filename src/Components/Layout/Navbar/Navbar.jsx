@@ -108,6 +108,7 @@ const Navbar = () => {
                                   key={subIndex}
                                   className='px-3 hover:underline'
                                   role="menuitem"
+                                  onClick={() => setDropDownState(!dropDownState)}
                                 >
                                   <Link to={subItem?.link}>{subItem?.label}</Link>
                                 </li>

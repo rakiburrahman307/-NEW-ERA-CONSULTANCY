@@ -35,7 +35,7 @@ const router = createBrowserRouter([
         element: <JobVisaCounselling />,
       },
       {
-        path: "/study_abroad/:value",
+        path: "/study_abroad/:country",
         element: <Details />,
       },
     ],

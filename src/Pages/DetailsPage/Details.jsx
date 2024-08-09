@@ -1,43 +1,33 @@
+import { useParams } from "react-router-dom";
+import { lazy, Suspense } from "react";
+import Loading from "../Loading/Loading";
 
-import { useParams } from 'react-router-dom';
-import countriesData from './countries.json';
+// Lazy load country components
+const countryComponents = {
+  usa: lazy(() => import("../CountryDetailsPage/Usa")),
+  uk: lazy(() => import("../CountryDetailsPage/Uk")),
+  australia: lazy(() => import("../CountryDetailsPage/Australia")),
+  sweden: lazy(() => import("../CountryDetailsPage/Sweden")),
+  denmark: lazy(() => import("../CountryDetailsPage/Denmark")),
+  hungary: lazy(() => import("../CountryDetailsPage/Hungary")),
+  czech_republic: lazy(() => import("../CountryDetailsPage/CzechRepublic")),
+};
 
 const Details = () => {
-  const { value: countryName } = useParams();
+  const { country } = useParams();
+  const CountryComponent = countryComponents[country];
 
-  if (countryName === "usa") {
-    return(
-        <section></section>
-    )
-  }else if(countryName === "uk"){
-    return (
-        <section></section>
-      )
-  }else if (countryName === "australia") {
-    return (
-        <section></section>
-      )
-  }else if(countryName === "sweden"){
-    return (
-        <section></section>
-      )
-  }else if(countryName === "denmark") {
-    return (
-        <section></section>
-      )
-  }else if(countryName === "hungary") {
-    return (
-        <section></section>
-      )
-  }else{
-    return (
-        <section></section>
-      )
-  }
-  
+  return (
+    <div>
+      {CountryComponent ? (
+        <Suspense fallback={<Loading />}>
+          <CountryComponent />
+        </Suspense>
+      ) : (
+        <section>No data available.</section>
+      )}
+    </div>
+  );
 };
 
 export default Details;
-
-// i want this stucture of coponents using if else or swich case which better 
-// but i want all the json data visible incloude nasting map and all the country data show and no mising any details and the nasting maping also 
