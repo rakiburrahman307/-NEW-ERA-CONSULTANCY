@@ -31,7 +31,7 @@ const Faq = () => {
   };
 
   return (
-    <div className="bg-[#F2F4FF] min-h-screen">
+    <div className="bg-[#F2F4FF] max-h-screen">
       <section className="max-w-5xl mx-auto py-10 sm:py-20">
         <div className="flex items-center justify-center flex-col gap-y-2 py-5">
           <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold">Frequently Asked Questions</h1>

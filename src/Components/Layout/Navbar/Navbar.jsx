@@ -60,7 +60,7 @@ const Navbar = () => {
           ? "top-0 transition-all duration-300"
           : "top-10 transition-all duration-500"
       } z-20 shadow-lg`}
-      aria-label="Main Navigation"
+      aria-label='Main Navigation'
     >
       <TopNavInfo />
       <div className='flex bg-navBg'>
@@ -72,7 +72,7 @@ const Navbar = () => {
           <div className='bg-navBg shadow w-full'>
             <div className='mx-auto'>
               <div className='flex justify-between items-center py-4 px-5 max-w-[1366px] mx-auto'>
-                <Link to='/' aria-label="New Era Consultancy Home">
+                <Link to='/' aria-label='New Era Consultancy Home'>
                   <h2 className='text-base font-bold text-customTextColor'>
                     NEW ERA <br />
                     <span className='text-xl text-black'>CONSULTANCY</span>
@@ -101,28 +101,32 @@ const Navbar = () => {
                             <ul
                               id={`submenu-${index}`}
                               className='absolute top-12 z-10 space-y-2 rounded-lg bg-customBg whitespace-nowrap px-4 py-2 text-gray-100'
-                              role="menu"
+                              role='menu'
                             >
                               {item.submenu.map((subItem, subIndex) => (
                                 <li
                                   key={subIndex}
                                   className='px-3 hover:underline'
-                                  role="menuitem"
-                                  onClick={() => setDropDownState(!dropDownState)}
+                                  role='menuitem'
+                                  onClick={() =>
+                                    setDropDownState(!dropDownState)
+                                  }
                                 >
-                                  <Link to={subItem?.link}>{subItem?.label}</Link>
+                                  <Link to={subItem?.link}>
+                                    {subItem?.label}
+                                  </Link>
                                 </li>
                               ))}
                             </ul>
                           )}
                         </>
                       ) : (
-                        <NavLink 
-                          className={({ isActive }) => `${
-                            isActive && `text-orange-500 animate-pulse`
-                          }`}
+                        <NavLink
+                          className={({ isActive }) =>
+                            `${isActive && `text-orange-500 animate-pulse`}`
+                          }
                           to={item?.link}
-                          role="menuitem"
+                          role='menuitem'
                         >
                           <li className='group flex cursor-pointer flex-col'>
                             {item?.label}
@@ -138,7 +142,7 @@ const Navbar = () => {
                   <button
                     onClick={() => setIsOpen(!isOpen)}
                     className='w-5 h-6 flex items-center'
-                    aria-label="Toggle Mobile Menu"
+                    aria-label='Toggle Mobile Menu'
                   >
                     <FaBarsStaggered />
                   </button>

@@ -32,12 +32,7 @@ const AboutFull = () => {
         >
           <h2 className='text-4xl font-bold mb-4 text-customBg'>About Us</h2>
           <p className='text-lg text-justify'>
-            We are a leading consultancy firm based in the UK, USA, Australia,
-            Hungary, Sweden, Denmark, and the Czech Republic. Our mission is to
-            help students choose the right path for their higher studies abroad.
-            Our dedicated team provides comprehensive guidance and support
-            throughout the application process, ensuring that every student
-            finds the best fit for their academic and career goals.
+          New Era Consultancy is a leading consultancy firm established in Dhaka, The Capital city of Bangladesh. When we started a small and innovative business for helping Bangladeshi friends to study abroad, work and traveling around USA, UK, and Europe.
           </p>
         </div>
         <div

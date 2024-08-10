@@ -1,211 +1,207 @@
 import { Helmet } from "react-helmet";
+
 const uk = [
-  { about: "https://source.unsplash.com/300x300/?uk" },
+  {
+    about:
+      "The United Kingdom or Great Britain is composed of England, Wales, Scotland, and Northern Ireland territories and is located between the North Atlantic Ocean and the North Sea. The population is 62.8 million. The official language is English combined with local languages such as Scottish, Welsh, Irish, and Cornish. The UK is a key global player in political, economic, and military spheres. London is the Capital city and one of the most famous cities in the UK and also around the world. London is a very popular destination among tourists. With its history, culture, and modernity, London can amaze any person. The UK higher education system is one of the most prestigious in the world. Thousands of international students every year choose Great Britain as a study abroad country. The academic year in the UK begins in September and lasts till July. Undergraduate degree courses (Bachelors of Arts and Bachelors of Science) last 3 years. Master's degrees usually take a one-year course after completing an undergraduate degree. Course costs vary between 10,000 and 30,000 euros according to the degree and subject international students prefer to study.",
+  },
   {
     education_system: [
       {
         description:
-          "lorem ipsum d tempor inv sapiente vel aug recus dshd about tempor",
+          "The education system in the UK is divided into four main parts: Primary Education, Secondary Education, Further Education, and Higher Education.\n\n Children in the UK have to legally attend Primary and Secondary education which runs from about 5 years old until the student is 16 years old. The education system in the UK is also split into 'Key Stages' which breaks down as follows.",
         point: [
-          { key: "Key stage 1 :", value: "5 to 7 years old" },
-          { key: "Key stage 2 :", value: "7 to 11 years old" },
-          { key: "Key stage 3 :", value: "11 to 14 years old" },
-          { key: "Key stage 4 :", value: "14 to 16 years old" },
+          { key: "Key stage 1:", value: "5 to 7 years old" },
+          { key: "Key stage 2:", value: "7 to 11 years old" },
+          { key: "Key stage 3:", value: "11 to 14 years old" },
+          { key: "Key stage 4:", value: "14 to 16 years old" },
         ],
-        overView_title: "lorem ipsum dolor sit amet, consect",
+        overView_title: "Our Overview of the Education System in the UK",
         overview: [
           {
+            title: "Primary Education",
             primary_education:
-              "when an unknown printer took a galley of type and scrambled it to make a type specimen book",
+              "Primary education begins in the UK at age 5 and continues until 11, comprising key stage one and two under the UK educational system.",
           },
           {
+            title: "Secondary Education",
             secondary_education:
-              "when an unknown printer took a galley of type and scrambled it to make a type specimen book",
+              "From age 11 to 16, students will enter secondary school for key stages three and four and start their move towards taking the GCSEs. Learn more about secondary education in the UK and what it will involve. Primary and secondary education is mandatory in the UK. After age 16, education is optional.",
           },
           {
+            title: "Further Education",
             further_education:
-              "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been a type specimen book",
+              "Once a student finishes secondary education, they have the option to extend into further education to take their A-Levels, GNVQs, BTECs, or other such qualifications.",
           },
           {
+            title: "Higher Education",
             higher_education:
-              "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy",
+              "Probably the most important subject area on this site, this explains more about the higher education system in the UK and how it works for international students. Most international students will enter directly into the UK higher education system after completing their home country's equivalent to the UK's 'Further Education'.",
           },
         ],
       },
     ],
   },
   {
-    admission_requirement: [
+    secondary_education:
+      "The following checklist will be helpful while applying in the UK.",
+    checklist: [
+      { value: "Passport with validity of at least 6 months." },
+      { value: "HSC or equivalent completed." },
       {
-        description:
-          "lorem Ipsum is simply dummy text of the printing and typesetting industry",
-        point: [
-          { value: "lorem Ipsum and others are the industry's standard dummy" },
-          { value: "lorem Ipsum and others are the industry's standard dummy" },
-        ],
-        note: "please contact us at new era consultancy personally for further assistance on the above and visa procedure",
+        value:
+          "Graduation degree certificate/Provisional certificate (if applying for PG).",
       },
+      { value: "IELTS/TOEFL/PTE score result." },
+      { value: "Passport size white background photo." },
+      { value: "CV (Curriculum Vitae)." },
+      { value: "Statement of Purpose (SOP)." },
+      { value: "Any other relevant certificate." },
     ],
+    note:
+      "Please contact us at New Era Consultancy personally for further assistance on the above and visa procedures.",
+  },
+  {
+    study_cost:
+      "The USA is home to the maximum number of top universities in the world. So, the cost of living and education expenses can vary.",
   },
   {
     living_cost:
-      "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy",
+      "For a single person, it costs around $12,240 per year to maintain their living expenses.",
   },
   {
-    study_cost: [
-      {
-        description:
-          "lorem Ipsum is simply dummy text of the printing and typesetting industry",
-        question:
-          "lorem Ipsum is simply dummy text of the printing and typesetting industry ?",
-        point: [
-          { key: "Key stage 1 :", value: "5 to 7 years old" },
-          { key: "Key stage 2 :", value: "7 to 11 years old" },
-        ],
-        note: "High value courses like medical and veterinary are not included",
-      },
+    how_much_cost: [
+      { key: "Undergraduate Bachelor Degree", value: "$15,000 to $33,000" },
+      { key: "Postgraduate Master Degree", value: "$20,000 to $37,000" },
     ],
+    note: "High-value courses like medicine and veterinary are not included.",
   },
   {
     details:
-      "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy",
+      "International students, you have to pay your tuition fee first before you study. Normally, all universities take about 50% in advance from the 1st year's tuition fee. Overseas Student Health Cover (OSHC) also has to be paid with the tuition fee. Other additional costs like course materials and access to institution facilities will be charged when you are at your designated university.",
   },
 ];
 
 const Uk = () => {
   return (
-    <div className='p-6 bg-gray-100 min-h-screen'>
+    <div className="p-6 bg-gray-100 min-h-screen">
       <Helmet>
         <title>UK Education Details</title>
         <meta
-          name='description'
-          content='Detailed information about education in the UK, including living costs, study costs, and admission requirements.'
+          name="description"
+          content="Detailed information about education in the UK, including living costs, study costs, and admission requirements."
         />
       </Helmet>
 
       {/* About Section */}
-      {uk[0].about && (
-        <section className='mb-8 bg-white p-6 rounded-lg shadow-md transition-transform transform hover:scale-105'>
-          <h2 className='text-2xl font-bold mb-4 text-blue-600'>About</h2>
-          <img
-            src={uk[0].about}
-            alt='UK'
-            className='w-64 h-64 object-cover rounded-lg border-2 border-gray-300'
-          />
+      {uk[0]?.about && (
+        <section className="mb-8 bg-white p-6 rounded-lg shadow-md transition-transform transform hover:scale-105">
+          <h2 className="text-2xl font-bold mb-4 text-blue-600">About UK</h2>
+          <p className="text-gray-700">{uk[0]?.about}</p>
         </section>
       )}
 
       {/* Education System Section */}
-      {uk[1].education_system &&
-        uk[1].education_system.map((edu, index) => (
+      {uk[1]?.education_system &&
+        uk[1]?.education_system?.map((edu, index) => (
           <section
             key={index}
-            className='mb-8 bg-white p-6 rounded-lg shadow-md transition-transform transform hover:scale-105'
+            className="mb-8 bg-white p-6 rounded-lg shadow-md transition-transform transform hover:scale-105"
           >
-            <h2 className='text-2xl font-bold mb-4 text-green-600'>
-              Education System
+            <h2 className="text-2xl font-bold mb-4 text-green-600">
+              UK Education System
             </h2>
-            <p className='mb-4 text-gray-700'>{edu.description}</p>
-            {edu.point && (
-              <ul className='list-disc list-inside mb-4 text-gray-600'>
-                {edu.point.map((item, i) => (
-                  <li key={i} className='mb-2'>
-                    <strong className='text-gray-900'>{item.key}</strong>{" "}
-                    {item.value}
+            <p className="mb-4 text-gray-700">{edu?.description}</p>
+            {edu?.point && (
+              <ul className="list-disc list-inside mb-4 text-gray-600">
+                {edu?.point?.map((item, i) => (
+                  <li key={i} className="mb-2">
+                    <strong className="text-gray-900">{item?.key}</strong>{" "}
+                    {item?.value}
                   </li>
                 ))}
               </ul>
             )}
-            <h3 className='text-xl font-semibold mb-2 text-yellow-600'>
-              {edu.overView_title}
+            <h3 className="text-2xl font-semibold mb-2 text-yellow-600">
+              {edu?.overView_title}
             </h3>
-            {edu.overview && (
-              <ul className='list-disc list-inside text-gray-600'>
-                {edu.overview.map((item, i) => (
-                  <li key={i} className='mb-2'>
-                    {Object.values(item)[0]}
-                  </li>
+            {edu?.overview && (
+              <ul className="list-none list-inside text-justify">
+                {edu?.overview?.map((item, i) => (
+                  <div key={i}>
+                    <h2 className="text-xl text-black font-bold">
+                      {Object.values(item)[0]}
+                    </h2>
+                    <li className="mb-5">{Object.values(item)[1]}</li>
+                  </div>
                 ))}
               </ul>
             )}
           </section>
         ))}
 
-      {/* Admission Requirements Section */}
-      {uk[2].admission_requirement &&
-        uk[2].admission_requirement.map((req, index) => (
-          <section
-            key={index}
-            className='mb-8 bg-white p-6 rounded-lg shadow-md transition-transform transform hover:scale-105'
-          >
-            <h2 className='text-2xl font-bold mb-4 text-purple-600'>
-              Admission Requirements
-            </h2>
-            <p className='mb-4 text-gray-700'>{req.description}</p>
-            {req.point && (
-              <ul className='list-disc list-inside mb-4 text-gray-600'>
-                {req.point.map((item, i) => (
-                  <li key={i} className='mb-2'>
-                    {item.value}
-                  </li>
-                ))}
-              </ul>
-            )}
-            {req.note && (
-              <p className='font-semibold text-gray-800'>
-                <strong>Note:</strong> {req.note}
-              </p>
-            )}
-          </section>
-        ))}
-
-      {/* Living Cost Section */}
-      {uk[3].living_cost && (
-        <section className='mb-8 bg-white p-6 rounded-lg shadow-md transition-transform transform hover:scale-105'>
-          <h2 className='text-2xl font-bold mb-4 text-red-600'>Living Cost</h2>
-          <p className='text-gray-700'>{uk[3].living_cost}</p>
+      {/* Secondary Education Checklist Section */}
+      {uk[2]?.secondary_education && (
+        <section className="mb-8 bg-white p-6 rounded-lg shadow-md transition-transform transform hover:scale-105">
+          <h2 className="text-2xl font-bold mb-4 text-purple-600">
+            Secondary Education
+          </h2>
+          <p className="mb-4 text-gray-700">{uk[3]?.secondary_education}</p>
+          {uk[2]?.checklist && (
+            <ul className="list-disc list-inside mb-4 text-gray-600">
+              {uk[2]?.checklist?.map((item, i) => (
+                <li key={i} className="mb-2">
+                  {item?.value}
+                </li>
+              ))}
+            </ul>
+          )}
+          {uk[2]?.note && (
+            <p className="font-semibold text-gray-800">
+              <strong>Note:</strong> {uk[2]?.note}
+            </p>
+          )}
         </section>
       )}
 
       {/* Study Cost Section */}
-      {uk[4].study_cost &&
-        uk[4].study_cost.map((cost, index) => (
-          <section
-            key={index}
-            className='mb-8 bg-white p-6 rounded-lg shadow-md transition-transform transform hover:scale-105'
-          >
-            <h2 className='text-2xl font-bold mb-4 text-teal-600'>
-              Study Cost
-            </h2>
-            <p className='mb-4 text-gray-700'>{cost.description}</p>
-            {cost.question && (
-              <p className='font-semibold text-gray-800'>
-                <strong>Question:</strong> {cost.question}
-              </p>
-            )}
-            {cost.point && (
-              <ul className='list-disc list-inside mb-4 text-gray-600'>
-                {cost.point.map((item, i) => (
-                  <li key={i} className='mb-2'>
-                    <strong className='text-gray-900'>{item.key}</strong>{" "}
-                    {item.value}
-                  </li>
-                ))}
-              </ul>
-            )}
-            {cost.note && (
-              <p className='font-semibold text-gray-800'>
-                <strong>Note:</strong> {cost.note}
-              </p>
-            )}
-          </section>
-        ))}
+      {uk[3]?.study_cost && (
+        <section className="mb-8 bg-white p-6 rounded-lg shadow-md transition-transform transform hover:scale-105">
+          <h2 className="text-2xl font-bold mb-4 text-teal-600">Study Cost</h2>
+          <p className="text-gray-700">{uk[3]?.study_cost}</p>
+        </section>
+      )}
+      {/* Living Cost Section */}
+      {uk[4]?.living_cost && (
+        <section className="mb-8 bg-white p-6 rounded-lg shadow-md transition-transform transform hover:scale-105">
+          <h2 className="text-2xl font-bold mb-4 text-red-600">Living Cost</h2>
+          <p className="text-gray-700">{uk[4]?.living_cost}</p>
+        </section>
+      )}
+      {/* How Much Cost Section */}
+      {uk[5]?.how_much_cost && (
+        <section className="mb-8 bg-white p-6 rounded-lg shadow-md transition-transform transform hover:scale-105">
+          <h2 className="text-2xl font-bold mb-4 text-teal-600">
+          How much does it cost to study?
+          </h2>
+          {uk[5]?.how_much_cost?.map((item, i) => (
+            <p key={i} className="mb-2 text-gray-700">
+              <strong className="text-gray-900">{item?.key}:</strong> {item?.value}
+            </p>
+          ))}
+          {uk[5]?.note && (
+            <p className="font-semibold text-gray-800">
+              <strong>Note:</strong> {uk[5]?.note}
+            </p>
+          )}
+        </section>
+      )}
 
       {/* Details Section */}
-      {uk[5].details && (
-        <section className='mb-8 bg-white p-6 rounded-lg shadow-md transition-transform transform hover:scale-105'>
-          <h2 className='text-2xl font-bold mb-4 text-indigo-600'>Details</h2>
-          <p className='text-gray-700'>{uk[5].details}</p>
+      {uk[6]?.details && (
+        <section className="mb-8 bg-white p-6 rounded-lg shadow-md transition-transform transform hover:scale-105">
+          <h2 className="text-2xl font-bold mb-4 text-indigo-600">In-depth Details</h2>
+          <p className="text-gray-700">{uk[6]?.details}</p>
         </section>
       )}
     </div>

@@ -71,7 +71,7 @@ const FlagsSliders = () => {
       strength={500}
       className="my-10"
     >
-      <section className="slider-container py-10">
+      <section className="py-10">
         <h2 className="text-4xl font-black text-customBg text-center mb-8" data-aos="zoom-in">
           Countries We Work With
         </h2>
@@ -79,12 +79,12 @@ const FlagsSliders = () => {
           {flags.map((flag, index) => (
             <div
               key={index}
-              className="flex flex-col items-center p-4"
+              className="flex flex-col items-center justify-center p-4"
               data-aos="fade-up"
               data-aos-duration="1000"
             >
               <div
-                className={`w-60 h-60 relative transition-transform duration-300 ${loadedFlags.includes(index) ? "blur-0" : "blur-lg"}`}
+                className={`w-60 h-60 mx-auto flex items-center justify-center relative transition-transform duration-300 ${loadedFlags.includes(index) ? "blur-0" : "blur-lg"}`}
               >
                 <img
                   src={flag.src}
@@ -94,7 +94,7 @@ const FlagsSliders = () => {
                   onLoad={() => handleImageLoad(index)}
                 />
               </div>
-              <p className="text-white text-center text-xl font-bold mt-2">{flag.name}</p>
+              <p className="text-white text-center text-xl font-bold mt-4">{flag.name}</p>
             </div>
           ))}
         </Slider>

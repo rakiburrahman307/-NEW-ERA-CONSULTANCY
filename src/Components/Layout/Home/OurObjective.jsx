@@ -9,9 +9,9 @@ const OurObjective = () => {
         </h2>
         <div className="bg-gradient-to-l from-slate-700 to-slate-900 p-8 rounded-lg shadow-lg relative">
           <TypeAnimation
-            style={{ whiteSpace: 'pre-line', height: '450px', display: 'block' }}
+            style={{ whiteSpace: 'pre-line', display: 'block' }}
             sequence={[
-              `The key objective of New Era Consultancy is to be an internationally recognized consultancy firm that prepares students, workers, and visitors to "Choose their right path" in pursuing higher studies abroad.\n\nOur aim is to provide excellent service at a reasonable cost, within an agreed time scale.\n\nWe aim to provide cost predictability whenever possible so that our clients can prepare a budget for any given transaction.\n\nWe do not believe that our clients should be expected to pay disproportionately high charging rates for any matter.\n\nTherefore, we charge very competitive rates which reflect the complexity and size of the matter involved.\n\nWe believe in maintaining the highest level of transparency while we work for you.\n\nOur goal is to provide tailor-made solutions to cater to individual needs, meet immigration objectives, and help clients make informed decisions.\n\nWe aim to provide professional, competent, and experienced services which will help you accomplish your personal goals.`,
+              `The key objective of New Era Consultancy is to be an internationally recognized consultancy firm that prepares students, workers, and visitors to choose their right path in pursuing higher studies around the world.\n\nOur aim is to provide an excellent service at a reasonable cost within an agreed time scale.\n\nWe aim to provide cost predictability whenever it is possible so that our clients can prepare a budget for any given transaction.\n\nWe do not believe that our clients should be expected to pay disproportionately high charging rates for any matter.\n\nTherefore, we charge very competitive rates which reflect the complexity and size of the matter involved.\n\nWe believe in maintaining the highest level of transparency while we work for you.\n\nWe aim to provide tailor-made solutions to cater to individual needs, meet their immigration objectives, and help them make more informed decisions.\n\nOur goal is to provide you with professional, competent, and experienced services which will help you accomplish your personal goals.`,
               10000,
               '',
             ]}
@@ -21,7 +21,7 @@ const OurObjective = () => {
             repeat={Infinity}
             deletionSpeed={90}
             omitDeletionAnimation={true}
-            className="text-lg text-white"
+            className="text-lg text-white min-h-96 md:min-h-[450px]"
           />
         </div>
       </div>
