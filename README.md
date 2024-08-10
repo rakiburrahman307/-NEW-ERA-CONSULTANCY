@@ -1,8 +1,8 @@
-# NBC NEWS
+# New Era Consultancy
 
 ## Description
 
-NBC News Application is a web-based news platform that fetches and displays the latest news articles from various categories using the News API. Users can browse news articles, view detailed news content, and explore related topics.
+New Era Consultancy is a comprehensive platform providing educational and professional consultancy services. It offers a wide range of services including study abroad counseling, job visa counseling, and tourist visa processing.
 
 ## Table of Contents
 
@@ -15,9 +15,11 @@ NBC News Application is a web-based news platform that fetches and displays the 
 
 ## Features
 
-- **Browse News**: View the latest news articles from multiple categories like business, technology, sports, entertainment, and more.
-- **Search News**: Search for specific news articles.
-- **Detailed View**: Click on a news article to read the full content and see related topics.
+- **Welcome Section**: A welcoming message highlighting our consultancy services.
+- **Interactive Slider**: Displays the countries we work with.
+- **Study Abroad**: Detailed information on studying opportunities in various countries.
+- **Job Visa Counseling**: Comprehensive job visa counseling services.
+- **Tourist Visa Processing**: Guidelines and support for tourist visa applications.
 - **Responsive Design**: The application is fully responsive and works on all devices.
 
 ## Technologies Used
@@ -25,8 +27,8 @@ NBC News Application is a web-based news platform that fetches and displays the 
 - React
 - React Router
 - Tailwind CSS
-- News API
-- Vite
+- Parallax
+- Slick Carousel
 
 ## Installation
 
@@ -37,15 +39,36 @@ NBC News Application is a web-based news platform that fetches and displays the 
 
 ## Usage
 
-- Home Page: Open the application in your browser. The home page will display the latest news articles.
-- Search: Click on the search icon in the navbar to open the search input.
-- Article Details: Click on any news article title to view its detailed content. The details page will also show related topics.
-- Navigation: Use the navbar to navigate between different news categories.
+### Home Page
+
+- **Welcome Section**: Upon opening the application, you will be greeted with a welcoming message highlighting the consultancy services.
+- **Slider**: View the countries we work with through an interactive flag slider.
+
+### Study Abroad
+
+- **Browse Countries**: Navigate to the "Study Abroad" section using the navigation bar.
+- **Select Country**: Click on a country to view detailed information about studying opportunities, visa requirements, and available support services in that country.
+- **Detailed Information**: Each country page provides comprehensive information about universities, application processes, scholarship opportunities, and student life.
+
+### Job Visa Counseling
+
+- **Access Counseling**: Click on the "Job Visa Counseling" link in the navigation bar.
+- **Counseling Services**: Explore the various job visa counseling services offered, including visa application assistance, document preparation, and interview coaching.
+
+### Tourist Visa Processing
+
+- **Visa Information**: Navigate to the "Tourist Visa Processing" section for information on tourist visa requirements for different countries.
+- **Application Support**: Get detailed guidelines on the application process, required documents, and processing times.
+- **Contact Us**: Reach out to our support team for personalized assistance with your tourist visa application.
+
+### Navigation
+
+- **Responsive Navbar**: The navbar at the top allows easy navigation across different sections. It is fully responsive and adapts to various screen sizes.
+- **Mobile Menu**: On smaller devices, use the mobile sidebar menu to navigate. Toggle the menu using the menu icon in the top right corner.
 
 ## License
 
-This project is licensed under the [NBC NEWS](LICENSE).
-
+This project is licensed under the [New Era Consultancy](LICENSE).
 
 ## Contact
 
