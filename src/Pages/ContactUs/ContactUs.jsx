@@ -38,8 +38,10 @@ const ContactUs = () => {
               title='map'
               marginHeight='0'
               marginWidth='0'
+              allowfullscreen=''
+              loading='lazy'
               scrolling='no'
-              src='https://maps.google.com/maps?width=100%&height=600&hl=en&q=%C4%B0zmir+(My%20Business%20Name)&ie=UTF8&t=&z=14&iwloc=B&output=embed'
+              src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d912.704351530529!2d90.41907396952686!3d23.78951562582138!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c7e910ef609d%3A0x888ecf902098a825!2sShahabuddin%20Medical%20College%20Hospital!5e0!3m2!1sen!2sbd!4v1723660892658!5m2!1sen!2sbd'
               style={{ filter: "grayscale(1) contrast(1.2) opacity(0.4)" }}
             ></iframe>
             <div className='bg-white relative flex flex-wrap py-6 rounded shadow-md'>

@@ -53,7 +53,7 @@ const OurMissionVision = () => {
               />
             </div>
             <div
-              className='md:-ml-5 md:w-1/2 order-1 md:order-2 bg-customBg h-auto md:min-h-96 py-10 px-5 md:px-10 flex flex-col justify-center'
+              className='md:-ml-5 md:w-1/2 order-1 md:order-2 bg-customBg h-auto md:min-[400px] py-10 px-5 md:px-10 flex flex-col justify-center'
               data-aos='fade-left'
               data-aos-duration='1000'
             >
@@ -78,7 +78,7 @@ const OurMissionVision = () => {
           {/* Section 3: Our Vision with Parallax */}
           <div className='flex flex-col md:flex-row items-center p-8'>
             <div
-              className='md:-mr-5 md:w-1/2 bg-customBg h-auto sm:h-auto md:min-h-96 py-10 px-5 md:px-10 flex flex-col justify-center'
+              className='md:-mr-5 md:w-1/2 bg-customBg h-auto sm:h-auto md:min-h-[400px] py-10 px-5 md:px-10 flex flex-col justify-center'
               data-aos='fade-right'
               data-aos-duration='1000'
             >
@@ -122,7 +122,7 @@ const OurMissionVision = () => {
               />
             </div>
             <div
-              className='md:-ml-5 md:w-1/2 order-1 md:order-2 bg-customBg h-auto md:min-h-96 py-10 px-5 md:px-10 flex flex-col justify-center'
+              className='md:-ml-5 md:w-1/2 order-1 md:order-2 bg-customBg h-auto md:min-h-[400px] py-10 px-5 md:px-10 flex flex-col justify-center'
               data-aos='fade-left'
               data-aos-duration='1000'
             >

@@ -3,23 +3,53 @@ import { useState } from 'react';
 const faqData = [
   {
     id: 1,
-    question: 'What types of hosting plans do you offer?',
-    answer: 'We offer shared hosting, VPS hosting, dedicated server hosting, and cloud hosting plans.',
+    question: 'Are there any scholarship opportunities for Bangladeshi students?',
+    answer: 'Bangladeshi students have the opportunities to study with the help of scholarships, grants and loans which is provided by the authority to continue a smooth burden free education.',
   },
   {
     id: 2,
-    question: 'What is the uptime guarantee for your hosting services?',
-    answer: 'We guarantee an uptime of 99.9% for all our hosting services.',
+    question: 'Is there any affordable university to study from Bangladesh?',
+    answer: 'There are many universities which are quite affordable for studying in abroad.',
   },
   {
     id: 3,
-    question: 'Do you provide website migration assistance?',
-    answer: 'Yes, we offer free website migration assistance for new customers.',
+    question: 'Can I apply for Permanent Residency after completing my studies?',
+    answer: 'After completing studies, Bangladeshi students can apply for Permanent Residency. But they must have a valid Residence Permit, a job offer, and meet distinguished financial requirements.',
   },
   {
     id: 4,
-    question: 'What security measures do you have in place?',
-    answer: 'We employ advanced security measures including firewalls, DDoS protection, and regular security audits.',
+    question: 'Can I work while study in overseas?',
+    answer: 'Bangladeshi students are allowed to work a maximum of 20 hours.',
+  },
+  {
+    id: 5,
+    question: 'Can I apply with my spouse?',
+    answer: 'Students can apply with their spouse by following certain rules and regulations and they must meet certain requirements and provide legal documents. ',
+  },
+  {
+    id: 6,
+    question: 'What are the language requirements?',
+    answer: 'Bangladeshi students aiming to study abroad must secure a certain level of proficiency in the respective country language or other proficiency test such as: IELTS, TOFEL, Duolingo, PTE.',
+  },
+  {
+    id: 7,
+    question: 'Is study gap allows for Bangladeshi students?',
+    answer: 'Many Universities accept students from Bangladesh in spite of having study gaps.',
+  },
+  {
+    id: 8,
+    question: 'Who will be allowed to sponsor my studies?',
+    answer: 'The students can provide for themselves or their legal guardians and other relatives who can provide financial support during the study period. ',
+  },
+  {
+    id: 9,
+    question: 'How much time does it take to get an offer letter?',
+    answer: 'Usually it takes not more than three weeks to get an offer letter.',
+  },
+  {
+    id: 10,
+    question: 'Can I apply without IELTS?',
+    answer: 'It is possible to apply without IELTS in overseas with a Medium of Instructions (MOI).',
   },
 ];
 
@@ -31,7 +61,7 @@ const Faq = () => {
   };
 
   return (
-    <div className="bg-[#F2F4FF] max-h-screen">
+    <div className="bg-[#F2F4FF] max-h-auto">
       <section className="max-w-5xl mx-auto py-10 sm:py-20">
         <div className="flex items-center justify-center flex-col gap-y-2 py-5">
           <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold">Frequently Asked Questions</h1>

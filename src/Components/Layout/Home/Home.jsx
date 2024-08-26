@@ -6,13 +6,12 @@ import OurAchievements from "./OurAchievements";
 import OurMissionVision from "./OurMissionVision";
 import OurObjective from "./OurObjective";
 import OurService from "./OurService";
-
 import OurTeam from "./OurTeam";
 import UniversitySlider from "./UniversitySlider";
 
 const Home = () => {
   return (
-    <main className='max-w-[1366px] mx-auto'>
+    <main className='mx-auto'>
       <Carousel />
       <About />
       <FlagsSliders />
