@@ -78,7 +78,7 @@ const Denmark = () => {
           <h2 className='text-2xl font-bold mb-4 text-blue-600'>
             About Denmark
           </h2>
-          <p className='text-gray-700'>{denmark[0].about}</p>
+          <p className='text-gray-700 text-lg'>{denmark[0].about}</p>
         </section>
       )}
 
@@ -89,7 +89,7 @@ const Denmark = () => {
             Admission Requirements
           </h2>
           {denmark[1].admission_requirement.map((item, index) => (
-            <div key={index} className='mb-4'>
+            <div key={index} className='mb-4 text-lg'>
               {item.description && (
                 <p className='text-gray-700 mb-2'>{item.description}</p>
               )}
@@ -111,7 +111,7 @@ const Denmark = () => {
       {denmark[2]?.facility && (
         <section className='mb-8 bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105'>
           <h2 className='text-2xl font-bold mb-4 text-teal-600'>Facilities</h2>
-          <ul className='list-disc list-inside text-gray-600'>
+          <ul className='list-disc list-inside text-lg text-gray-600'>
             {denmark[2].facility.map((item, index) => (
               <li key={index} className='mb-2'>
                 {item}
@@ -127,7 +127,7 @@ const Denmark = () => {
           <h2 className='text-2xl font-bold mb-4 text-purple-600'>
             Requirements
           </h2>
-          <ul className='list-disc list-inside text-gray-600'>
+          <ul className='list-disc list-inside text-lg text-gray-600'>
             {denmark[3].requirement.map((item, index) => (
               <li key={index} className='mb-2'>
                 <strong className='text-gray-900'>{item.key}</strong>:{" "}
@@ -142,7 +142,7 @@ const Denmark = () => {
       {denmark[4]?.living_cost && (
         <section className='mb-8 bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105'>
           <h2 className='text-2xl font-bold mb-4 text-red-600'>Living Cost</h2>
-          <p className='text-gray-700'>{denmark[4].living_cost}</p>
+          <p className='text-gray-700 text-lg'>{denmark[4].living_cost}</p>
         </section>
       )}
 
@@ -152,7 +152,7 @@ const Denmark = () => {
           <h2 className='text-2xl font-bold mb-4 text-indigo-600'>
             Study Cost
           </h2>
-          <p className='text-gray-700'>{denmark[5].study_cost}</p>
+          <p className='text-gray-700 text-lg'>{denmark[5].study_cost}</p>
         </section>
       )}
     </div>

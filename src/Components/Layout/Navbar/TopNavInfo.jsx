@@ -21,7 +21,7 @@ const TopNavInfo = () => {
       }`}
       role="banner"
     >
-      <h3 className='text-sm text-black font-bold'>
+      <h3 className='text-base text-black font-bold'>
         Contact Us: +880 01700000000
       </h3>
       <div className='flex justify-center items-center'>
@@ -32,8 +32,8 @@ const TopNavInfo = () => {
           aria-label='Facebook'
         >
           <img
-            width='25'
-            height='25'
+            width='35'
+            height='35'
             src='https://img.icons8.com/color/48/facebook-new.png'
             alt='Facebook logo'
             loading='lazy'
@@ -46,8 +46,8 @@ const TopNavInfo = () => {
           aria-label='LinkedIn'
         >
           <img
-            width='25'
-            height='25'
+            width='35'
+            height='35'
             src='https://img.icons8.com/color/48/linkedin.png'
             alt='LinkedIn logo'
             loading='lazy'
@@ -60,8 +60,8 @@ const TopNavInfo = () => {
           aria-label='WhatsApp'
         >
           <img
-            width='25'
-            height='25'
+            width='35'
+            height='35'
             src='https://img.icons8.com/color/48/whatsapp--v1.png'
             alt='WhatsApp logo'
             loading='lazy'

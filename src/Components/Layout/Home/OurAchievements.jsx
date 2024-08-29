@@ -56,7 +56,7 @@ const OurAchievements = () => {
 
   return (
     <div className='slider-container mx-auto px-4 py-10'>
-      <h2 className='text-4xl text-center text-customBg font-bold mb-4'>Our Achievements</h2>
+      <h2 className='text-3xl sm:text-5xl text-center text-customBg font-bold mb-4'>Our Achievements</h2>
       <Slider {...settings}>
         {achievements.map((achievement, index) => (
           <div key={index} className='flex flex-col items-center'>

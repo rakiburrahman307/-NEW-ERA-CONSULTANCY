@@ -27,9 +27,9 @@ const OurMissionVision = () => {
         strength={500}
         className='mt-10'
       >
-        <div className='container mx-auto px-4 sm:px-6 lg:px-8'>
+        <div className='container mx-auto px-4 sm:px-6 lg:px-5'>
           <h2
-            className='text-4xl text-customBg font-bold text-center mt-16 mb-10'
+            className='text-3xl sm:text-5xl text-customBg font-bold text-center mt-16 mb-10'
             data-aos='zoom-in'
           >
             Why Choose Us
@@ -57,10 +57,10 @@ const OurMissionVision = () => {
               data-aos='fade-left'
               data-aos-duration='1000'
             >
-              <h3 className='text-3xl font-bold mb-4 text-white'>
+              <h3 className='text-4xl font-bold mb-4 text-white'>
                 Our Mission
               </h3>
-              <p className='text-lg text-white text-justify'>
+              <p className='text-xl text-white text-justify'>
                 Our mission is to be the best Centre of excellence in learning
                 and innovation driven by social sensitivity. By 2026 it will be
                 amongst the top rated educational and professional studies,
@@ -82,8 +82,8 @@ const OurMissionVision = () => {
               data-aos='fade-right'
               data-aos-duration='1000'
             >
-              <h3 className='text-3xl font-bold mb-4 text-white'>Our Vision</h3>
-              <p className='text-lg text-white text-justify'>
+              <h3 className='text-4xl font-bold mb-4 text-white'>Our Vision</h3>
+              <p className='text-xl text-white text-justify'>
               Develop multifaced professional in diverse fields to understand the rapidly changing needs of the complex global economy and to prepare their mindset to be confident, creative and proactive. Develop sustainable network with high quality academicians and professionals in the corporate and social arena.
               </p>
             </div>
@@ -126,8 +126,8 @@ const OurMissionVision = () => {
               data-aos='fade-left'
               data-aos-duration='1000'
             >
-              <h3 className='text-3xl font-bold mb-4 text-white'>Our Values</h3>
-              <p className='text-lg text-white text-justify'>
+              <h3 className='text-4xl font-bold mb-4 text-white'>Our Values</h3>
+              <p className='text-xl text-white text-justify'>
                 Integrity, excellence, and commitment are at the core of
                 everything we do. We strive to provide the highest quality
                 service to our students and partners.

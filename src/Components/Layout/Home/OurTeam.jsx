@@ -38,7 +38,7 @@ const OurTeam = () => {
           <h2 className="text-3xl sm:text-5xl leading-normal font-extrabold tracking-tight text-gray-900">
             Meet Our <span className="text-indigo-600">Team</span>
           </h2>
-          <p className="mt-4 text-md leading-7 text-gray-500 font-light">
+          <p className="mt-4 text-lg leading-7 text-gray-500 font-light">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque,
             iste dolor cupiditate blanditiis ratione.
             <br />

@@ -4,7 +4,7 @@ const OurObjective = () => {
   return (
     <section className="py-16 bg-gradient-to-r from-slate-500 to-slate-800">
       <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl font-extrabold text-customBg text-center mb-12" data-aos="zoom-in">
+        <h2 className="text-3xl sm:text-5xl font-extrabold text-customBg text-center mb-12" data-aos="zoom-in">
           Our Objective
         </h2>
         <div className="bg-gradient-to-l from-slate-700 to-slate-900 p-8 rounded-lg shadow-lg relative">
@@ -21,7 +21,7 @@ const OurObjective = () => {
             repeat={Infinity}
             deletionSpeed={90}
             omitDeletionAnimation={true}
-            className="text-lg text-white min-h-96 md:min-h-[450px]"
+            className="text-xl text-white min-h-96 md:min-h-[450px]"
           />
         </div>
       </div>

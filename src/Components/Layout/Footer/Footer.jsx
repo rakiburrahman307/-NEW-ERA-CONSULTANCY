@@ -1,68 +1,93 @@
 import footerLogo from "../../../assets/logo/logo.png";
 import { FaFacebook, FaRedditAlien, FaRss } from "react-icons/fa";
 import { IoLogoTwitter } from "react-icons/io";
+
 const Footer = () => {
   return (
-    <footer className='footer footer-center p-10 bg-[#0E1E32] text-primary-content max-w-[1920px]'>
-      <div className='max-w-[1133px] h-auto md:h-[117px] mx-auto flex flex-col md:flex-row justify-center md:justify-between items-center'>
-        <div className='flex flex-col items-center justify-center gap-2 h-auto w-[200px] md:h-[107px]'>
-          <img src={footerLogo} alt='nbc_logo' className='w-[66px] h-10' />
-          <p className='text-center text-white font-semibold'>
+    <footer className="pt-20 bg-[#0E1E32] text-primary-content">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center">
+        {/* Logo and Branding */}
+        <div className="flex flex-col items-center gap-2">
+          <img
+            src={footerLogo}
+            alt="New Era Consultancy Logo"
+            className="w-20 h-16 md:w-24 md:h-20"
+          />
+          <p className="text-xl md:text-2xl text-white font-semibold">
             New Era Consultancy
           </p>
         </div>
-        <div className='w-[210px] h-[116px] flex flex-col md:justify-start items-center md:items-start'>
-          <p className='font-medium text-base text-white cursor-pointer hover:text-white/80 hover:scale-105 hover:underline'>
-            Privacy Policy
-          </p>
-          <p className='font-medium text-base text-white cursor-pointer hover:text-white/80 hover:scale-105 hover:underline'>
-            Do not sell my personal info
-          </p>
-          <p className='font-medium text-base text-white cursor-pointer hover:text-white/80 hover:scale-105 hover:underline'>
-            Terms of Service
-          </p>
-          <p className='font-medium text-base text-white cursor-pointer hover:text-white/80 hover:scale-105 hover:underline'>
-            nbcnews.com Site Map
-          </p>
+
+        {/* Quick Links */}
+        <div className="grid grid-cols-3 md:grid-cols-4 gap-4 text-center  mt-5 md:mt-0">
+          {/* Title spanning all columns */}
+          <h2 className="col-span-3 md:col-span-4 text-lg text-white font-bold mb-2">
+            Quick Links
+          </h2>
+          {[
+            "USA",
+            "UK",
+            "Australia",
+            "Sweden",
+            "Denmark",
+            "Hungary",
+            "Czech Republic",
+          ].map((country) => (
+            <p
+              key={country}
+              className="font-medium text-base text-white cursor-pointer hover:text-white/80 hover:scale-105 hover:underline"
+            >
+              {country}
+            </p>
+          ))}
         </div>
-        <div>
-          <div className='w-[347px] h-[32px] flex items-center justify-center md:justify-start gap-5 mb-5'>
-            <p className='font-medium text-base text-white cursor-pointer hover:text-white/80 hover:scale-105 hover:underline'>
-              About
-            </p>
-            <p className='font-medium text-base text-white cursor-pointer hover:text-white/80 hover:scale-105 hover:underline'>
-              Contact
-            </p>
-            <p className='font-medium text-base text-white cursor-pointer hover:text-white/80 hover:scale-105 hover:underline'>
-              Careers
-            </p>
-            <p className='font-medium text-base text-white cursor-pointer hover:text-white/80 hover:scale-105 hover:underline'>
-              Coupons
-            </p>
+
+        {/* Navigation and Social Icons */}
+        <div className="flex flex-col items-center gap-6 mt-5 md:mt-0">
+          <div className="flex gap-6">
+            {["About", "Contact"].map((item) => (
+              <p
+                key={item}
+                className="font-medium text-base text-white cursor-pointer hover:text-white/80 hover:scale-105 hover:underline"
+              >
+                {item}
+              </p>
+            ))}
           </div>
-          <div className='w-[266.18px] h-[28px] flex items-center justify-end gap-10'>
+          <div className="flex gap-5">
             <FaRss
+              aria-label="RSS"
               size={20}
-              className='text-white cursor-pointer hover:text-white/70 hover:scale-105 hover:underline'
+              className="text-white cursor-pointer hover:text-white/70 hover:scale-110"
             />
             <FaRedditAlien
+              aria-label="Reddit"
               size={20}
-              className='text-white cursor-pointer hover:text-white/70 hover:scale-105 hover:underline'
+              className="text-white cursor-pointer hover:text-white/70 hover:scale-110"
             />
             <IoLogoTwitter
+              aria-label="Twitter"
               size={20}
-              className='text-white cursor-pointer hover:text-white/70 hover:scale-105 hover:underline'
+              className="text-white cursor-pointer hover:text-white/70 hover:scale-110"
             />
             <FaFacebook
+              aria-label="Facebook"
               size={20}
-              className='text-white cursor-pointer hover:text-white/70 hover:scale-105 hover:underline'
+              className="text-white cursor-pointer hover:text-white/70 hover:scale-110"
             />
           </div>
         </div>
       </div>
-      <h4 className='text-white text-sm text-center'>
-        copyright &copy; 2024 | New Era Consultancy
-      </h4>
+
+      {/* Footer Bottom Text */}
+      <div className="flex flex-col justify-center items-center mt-20">
+        <h4 className="text-white text-sm text-center">
+          &copy; 2024 New Era Consultancy. All Rights Reserved.
+        </h4>
+        <p className="text-white text-xs text-center mt-2">
+          Designed and crafted with 💙 by Rakibur Rahman.
+        </p>
+      </div>
     </footer>
   );
 };

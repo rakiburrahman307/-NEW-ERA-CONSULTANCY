@@ -80,7 +80,7 @@ const Australia = () => {
       {australia[0]?.about && (
         <section className="mb-8 bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105">
           <h2 className="text-2xl font-bold mb-4 text-blue-600">About Australia</h2>
-          <p className="text-gray-700 text-justify">{australia[0].about}</p>
+          <p className="text-gray-700 text-lg text-justify">{australia[0].about}</p>
         </section>
       )}
 
@@ -88,7 +88,7 @@ const Australia = () => {
       {australia[1]?.why_choose_australia && (
         <section className="mb-8 bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105">
           <h2 className="text-2xl font-bold mb-4 text-green-600">Why Choose Australia</h2>
-          <ul className="list-disc list-inside text-gray-600 text-justify">
+          <ul className="list-disc text-lg list-inside text-gray-600 text-justify">
             {australia[1].why_choose_australia.map((item, index) => (
               <li key={index} className="mb-2">
                 <strong className="text-gray-800">{item.key}</strong> {item.value}
@@ -102,7 +102,7 @@ const Australia = () => {
       {australia[2]?.why_study_australia && (
         <section className="mb-8 bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105">
           <h2 className="text-2xl font-bold mb-4 text-teal-600">Why Study in Australia</h2>
-          <ul className="list-disc list-inside text-gray-600">
+          <ul className="list-disc text-lg list-inside text-gray-600">
             {australia[2].why_study_australia.map((item, index) => (
               <li key={index} className="mb-2">{item}</li>
             ))}
@@ -114,7 +114,7 @@ const Australia = () => {
       {australia[3]?.visa_requirement && (
         <section className="mb-8 bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105">
           <h2 className="text-2xl font-bold mb-4 text-red-600">Visa Requirements</h2>
-          <ul className="list-disc list-inside text-gray-600">
+          <ul className="list-disc text-lg list-inside text-gray-600">
             {australia[3].visa_requirement.map((item, index) =>
               typeof item === 'string' ? (
                 <li key={index} className="mb-2">{item}</li>
@@ -132,7 +132,7 @@ const Australia = () => {
       {australia[4]?.other && (
         <section className="mb-8 bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105">
           <h2 className="text-2xl font-bold mb-4 text-indigo-600">Our Facilities & Requirements in Australia</h2>
-          <ul className="list-disc list-inside text-gray-600">
+          <ul className="list-disc text-lg list-inside text-gray-600">
             <p className="font-semibold mb-2">Work Regulations:</p>
             {australia[4].other.map((item, index) => <li key={index} className="mb-2">{item}</li>)}
           </ul>

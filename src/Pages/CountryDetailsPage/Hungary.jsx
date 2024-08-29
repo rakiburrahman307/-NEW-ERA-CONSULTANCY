@@ -72,7 +72,7 @@ const Hungary = () => {
       {hungary[0]?.about && (
         <section className="mb-8 bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105">
           <h2 className="text-2xl font-bold mb-4 text-blue-600">About Hungary</h2>
-          <p className="text-gray-700">{hungary[0].about}</p>
+          <p className="text-gray-700 text-lg">{hungary[0].about}</p>
         </section>
       )}
 
@@ -81,7 +81,7 @@ const Hungary = () => {
         <section className="mb-8 bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105">
           <h2 className="text-2xl font-bold mb-4 text-green-600">Admission Requirements</h2>
           {hungary[1].admission_requirement.map((item, index) => (
-            <div key={index} className="mb-4">
+            <div key={index} className="mb-4 text-lg">
               {item.description && <p className="text-gray-700 mb-2">{item.description}</p>}
               {item.point && (
                 <ul className="list-disc list-inside text-gray-600">
@@ -99,7 +99,7 @@ const Hungary = () => {
       {hungary[2]?.facility && (
         <section className="mb-8 bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105">
           <h2 className="text-2xl font-bold mb-4 text-teal-600">Facilities</h2>
-          <ul className="list-disc list-inside text-gray-600">
+          <ul className="list-disc list-inside text-lg text-gray-600">
             {hungary[2].facility.map((item, index) => (
               <li key={index} className="mb-2">{item}</li>
             ))}
@@ -111,7 +111,7 @@ const Hungary = () => {
       {hungary[3]?.requirement && (
         <section className="mb-8 bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105">
           <h2 className="text-2xl font-bold mb-4 text-purple-600">Requirements</h2>
-          <ul className="list-disc list-inside text-gray-600">
+          <ul className="list-disc list-inside text-lg text-gray-600">
             {hungary[3].requirement.map((item, index) => (
               <li key={index} className="mb-2">
                 <strong className="text-gray-900">{item.key}</strong>: {item.value}
@@ -125,7 +125,7 @@ const Hungary = () => {
       {hungary[4]?.living_cost && (
         <section className="mb-8 bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105">
           <h2 className="text-2xl font-bold mb-4 text-red-600">Living Cost</h2>
-          <p className="text-gray-700">{hungary[4].living_cost}</p>
+          <p className="text-gray-700 text-lg">{hungary[4].living_cost}</p>
         </section>
       )}
 
@@ -133,7 +133,7 @@ const Hungary = () => {
       {hungary[5]?.study_cost && (
         <section className="mb-8 bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105">
           <h2 className="text-2xl font-bold mb-4 text-indigo-600">Study Cost</h2>
-          <ul className="list-disc list-inside text-gray-600">
+          <ul className="list-disc list-inside text-lg text-gray-600">
             {hungary[5].study_cost.map((item, index) => (
               <li key={index} className="mb-2">
                 <strong className="text-gray-900">{item.key}</strong>: {item.value}

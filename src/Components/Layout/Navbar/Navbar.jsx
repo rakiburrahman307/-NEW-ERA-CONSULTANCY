@@ -80,7 +80,7 @@ const Navbar = () => {
                   </h2>
                 </Link>
 
-                <ul className='md:flex justify-around items-center gap-8 list-none hidden'>
+                <ul className='md:flex justify-around items-center text-lg font-bold gap-8 list-none hidden'>
                   {menuItems?.map((item, index) => (
                     <li
                       key={index}

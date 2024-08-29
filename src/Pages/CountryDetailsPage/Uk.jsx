@@ -97,7 +97,7 @@ const Uk = () => {
       {uk[0]?.about && (
         <section className="mb-8 bg-white p-6 rounded-lg shadow-md transition-transform transform hover:scale-105">
           <h2 className="text-2xl font-bold mb-4 text-blue-600">About UK</h2>
-          <p className="text-gray-700">{uk[0]?.about}</p>
+          <p className="text-gray-700 text-lg">{uk[0]?.about}</p>
         </section>
       )}
 
@@ -106,7 +106,7 @@ const Uk = () => {
         uk[1]?.education_system?.map((edu, index) => (
           <section
             key={index}
-            className="mb-8 bg-white p-6 rounded-lg shadow-md transition-transform transform hover:scale-105"
+            className="mb-8 text-lg bg-white p-6 rounded-lg shadow-md transition-transform transform hover:scale-105"
           >
             <h2 className="text-2xl font-bold mb-4 text-green-600">
               UK Education System
@@ -142,7 +142,7 @@ const Uk = () => {
 
       {/* Secondary Education Checklist Section */}
       {uk[2]?.secondary_education && (
-        <section className="mb-8 bg-white p-6 rounded-lg shadow-md transition-transform transform hover:scale-105">
+        <section className="mb-8 text-lg bg-white p-6 rounded-lg shadow-md transition-transform transform hover:scale-105">
           <h2 className="text-2xl font-bold mb-4 text-purple-600">
             Secondary Education
           </h2>
@@ -166,21 +166,21 @@ const Uk = () => {
 
       {/* Study Cost Section */}
       {uk[3]?.study_cost && (
-        <section className="mb-8 bg-white p-6 rounded-lg shadow-md transition-transform transform hover:scale-105">
+        <section className="mb-8 text-lg bg-white p-6 rounded-lg shadow-md transition-transform transform hover:scale-105">
           <h2 className="text-2xl font-bold mb-4 text-teal-600">Study Cost</h2>
           <p className="text-gray-700">{uk[3]?.study_cost}</p>
         </section>
       )}
       {/* Living Cost Section */}
       {uk[4]?.living_cost && (
-        <section className="mb-8 bg-white p-6 rounded-lg shadow-md transition-transform transform hover:scale-105">
+        <section className="mb-8 text-lg bg-white p-6 rounded-lg shadow-md transition-transform transform hover:scale-105">
           <h2 className="text-2xl font-bold mb-4 text-red-600">Living Cost</h2>
           <p className="text-gray-700">{uk[4]?.living_cost}</p>
         </section>
       )}
       {/* How Much Cost Section */}
       {uk[5]?.how_much_cost && (
-        <section className="mb-8 bg-white p-6 rounded-lg shadow-md transition-transform transform hover:scale-105">
+        <section className="mb-8 text-lg bg-white p-6 rounded-lg shadow-md transition-transform transform hover:scale-105">
           <h2 className="text-2xl font-bold mb-4 text-teal-600">
           How much does it cost to study?
           </h2>
@@ -199,7 +199,7 @@ const Uk = () => {
 
       {/* Details Section */}
       {uk[6]?.details && (
-        <section className="mb-8 bg-white p-6 rounded-lg shadow-md transition-transform transform hover:scale-105">
+        <section className="mb-8 text-lg bg-white p-6 rounded-lg shadow-md transition-transform transform hover:scale-105">
           <h2 className="text-2xl font-bold mb-4 text-indigo-600">In-depth Details</h2>
           <p className="text-gray-700">{uk[6]?.details}</p>
         </section>

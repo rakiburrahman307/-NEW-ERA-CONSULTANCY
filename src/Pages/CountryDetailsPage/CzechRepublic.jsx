@@ -69,7 +69,7 @@ const CzechRepublic = () => {
       {czech_republic[0]?.about && (
         <section className="mb-8 bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105">
           <h2 className="text-2xl font-bold mb-4 text-blue-600">About Czech Republic</h2>
-          <p className="text-gray-700">{czech_republic[0].about}</p>
+          <p className="text-gray-700 text-lg">{czech_republic[0].about}</p>
         </section>
       )}
 
@@ -78,7 +78,7 @@ const CzechRepublic = () => {
         <section className="mb-8 bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105">
           <h2 className="text-2xl font-bold mb-4 text-green-600">Admission Requirements</h2>
           {czech_republic[1].admission_requirement.map((item, index) => (
-            <div key={index} className="mb-4">
+            <div key={index} className="mb-4 text-lg">
               {item.description && (
                 <p className="text-gray-700 mb-2">{item.description}</p>
               )}
@@ -99,7 +99,7 @@ const CzechRepublic = () => {
         <section className="mb-8 bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105">
           <h2 className="text-2xl font-bold mb-4 text-teal-600">Other Facility & Requirements</h2>
           {czech_republic[2].facility.map((item, index) => (
-            <div key={index} className="mb-4">
+            <div key={index} className="mb-4 text-lg">
               <p>{item?.description}</p>
               <h3 className="text-xl font-bold text-gray-800">{item?.title}</h3>
               <p className="text-gray-700 mb-2">{item.value}</p>
@@ -119,7 +119,7 @@ const CzechRepublic = () => {
       {czech_republic[3]?.living_cost && (
         <section className="mb-8 bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105">
           <h2 className="text-2xl font-bold mb-4 text-red-600">Living Cost</h2>
-          <p className="text-gray-700">{czech_republic[3].living_cost}</p>
+          <p className="text-gray-700 text-lg">{czech_republic[3].living_cost}</p>
         </section>
       )}
 
@@ -127,7 +127,7 @@ const CzechRepublic = () => {
       {czech_republic[4]?.study_cost && (
         <section className="mb-8 bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105">
           <h2 className="text-2xl font-bold mb-4 text-indigo-600">Study Cost</h2>
-          <p className="text-gray-700">{czech_republic[4].study_cost}</p>
+          <p className="text-gray-700 text-lg">{czech_republic[4].study_cost}</p>
         </section>
       )}
     </div>

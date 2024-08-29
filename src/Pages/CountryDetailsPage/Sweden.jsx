@@ -84,7 +84,7 @@ const Sweden = () => {
           <h2 className='text-2xl font-bold mb-4 text-blue-600'>
             About Sweden
           </h2>
-          <p className='text-gray-700'>{sweden[0].about}</p>
+          <p className='text-gray-700 text-lg'>{sweden[0].about}</p>
         </section>
       )}
 
@@ -95,7 +95,7 @@ const Sweden = () => {
             Admission Requirements
           </h2>
           {sweden[1].admission_requirement.map((item, index) => (
-            <div key={index} className='mb-4'>
+            <div key={index} className='mb-4 text-lg'>
               {item.description && (
                 <p className='text-gray-700 mb-2'>{item.description}</p>
               )}
@@ -124,7 +124,7 @@ const Sweden = () => {
           <h2 className='text-2xl font-bold mb-4 text-purple-600'>
             Requirements
           </h2>
-          <ul className='list-disc list-inside text-gray-600'>
+          <ul className='list-disc list-inside text-gray-600 text-lg'>
             {sweden[2].requirement.map((item, index) => (
               <li key={index} className='mb-2'>
                 <strong className='text-gray-900'>{item.key}</strong>{" "}
@@ -139,7 +139,7 @@ const Sweden = () => {
       {sweden[3]?.facility && (
         <section className='mb-8 bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105'>
           <h2 className='text-2xl font-bold mb-4 text-teal-600'>Facilities</h2>
-          <ul className='list-disc list-inside text-gray-600'>
+          <ul className='list-disc list-inside text-lg text-gray-600'>
             {sweden[3].facility.map((item, index) => (
               <li key={index} className='mb-2'>
                 {item}
@@ -153,7 +153,7 @@ const Sweden = () => {
       {sweden[4]?.living_costs && (
         <section className='mb-8 bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105'>
           <h2 className='text-2xl font-bold mb-4 text-red-600'>Living Cost</h2>
-          <p className='text-gray-700'>{sweden[4].living_costs}</p>
+          <p className='text-gray-700 text-lg'>{sweden[4].living_costs}</p>
         </section>
       )}
 
@@ -163,7 +163,7 @@ const Sweden = () => {
           <h2 className='text-2xl font-bold mb-4 text-orange-600'>
             How much Does it cost to study?
           </h2>
-          <ul className='list-disc list-inside text-gray-600'>
+          <ul className='list-disc list-inside text-lg text-gray-600'>
             {sweden[5].how_much_cost.map((item, index) => (
               <li key={index} className='mb-2'>
                 <strong className='text-gray-900'>{item.key}</strong>{" "}
@@ -172,7 +172,7 @@ const Sweden = () => {
             ))}
           </ul>
           {sweden[5]?.note && (
-            <p className='font-semibold text-gray-800'>
+            <p className='font-semibold text-lg text-gray-800'>
               <strong>Note:</strong> {sweden[5].note}
             </p>
           )}

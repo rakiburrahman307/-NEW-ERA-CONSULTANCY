@@ -9,11 +9,11 @@ const OurService = () => {
     <section className='bg-white py-16 overflow-x-hidden'>
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center md:flex-row md:space-x-8'>
         <div className='md:w-1/2 mb-8 md:mb-0' data-aos='fade-right'>
-          <h2 className='text-4xl text-customBg font-bold mb-4'>Our Services</h2>
-          <p className='text-gray-700 mb-4 text-justify'>
+          <h2 className='text-3xl md:text-5xl text-customBg font-bold mb-4'>Our Services</h2>
+          <p className='text-gray-700 text-xl mb-4 text-justify'>
             We offer a variety of services to help you achieve your goals. Our team of experts is dedicated to providing top-notch service and support to ensure your success. Whether you&apos;re looking for consulting, project management, or technical support, we have the skills and experience to help you succeed.
           </p>
-          <p className='text-gray-700 mb-4 text-justify'>
+          <p className='text-gray-700 text-xl mb-4 text-justify'>
             Our services are tailored to meet your specific needs, and we work closely with you to understand your requirements and deliver solutions that exceed your expectations. Contact us today to learn more about how we can help you achieve your goals.
           </p>
           <Link

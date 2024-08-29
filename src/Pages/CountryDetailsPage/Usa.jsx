@@ -1,3 +1,5 @@
+import { Helmet } from "react-helmet";
+
 const usa = [
   {
     why_choose_usa: [
@@ -30,7 +32,14 @@ const usa = [
 
 const Usa = () => {
   return (
-    <section className="max-w-7xl mx-auto p-4 sm:p-6 lg:p-8 bg-gray-50 rounded-lg shadow-lg space-y-6 transition-all duration-300">
+    <section className="mx-auto p-4 sm:p-6 lg:p-8 bg-gray-50 rounded-lg shadow-lg space-y-6 transition-all duration-300">
+       <Helmet>
+        <title>USA Education Details</title>
+        <meta
+          name='description'
+          content='Detailed information about education in USA, including admission requirements, living costs, and facilities.'
+        />
+      </Helmet>
       {usa.map((section, index) => {
         const [key] = Object.keys(section);
         const data = section[key];
@@ -40,7 +49,7 @@ const Usa = () => {
             return (
               <div
                 key={index}
-                className="bg-white p-4 rounded-md shadow-md hover:shadow-lg transition-shadow duration-300"
+                className="bg-white text-lg p-4 rounded-md shadow-md hover:shadow-lg transition-shadow duration-300"
               >
                 <h2 className="text-2xl sm:text-3xl font-semibold mb-3 text-blue-500">
                   Why Choose USA as a Study Destination?
@@ -58,7 +67,7 @@ const Usa = () => {
             return (
               <div
                 key={index}
-                className="bg-white p-4 rounded-md shadow-md hover:shadow-lg transition-shadow duration-300"
+                className="bg-white text-lg p-4 rounded-md shadow-md hover:shadow-lg transition-shadow duration-300"
               >
                 <h2 className="text-2xl sm:text-3xl font-semibold mb-3 text-red-500">
                   How much does it cost to study?
@@ -70,7 +79,7 @@ const Usa = () => {
             return (
               <div
                 key={index}
-                className="bg-white p-4 rounded-md shadow-md hover:shadow-lg transition-shadow duration-300"
+                className="bg-white text-lg p-4 rounded-md shadow-md hover:shadow-lg transition-shadow duration-300"
               >
                 <h2 className="text-2xl sm:text-3xl font-semibold mb-3 text-purple-500">
                   Living Cost
@@ -82,7 +91,7 @@ const Usa = () => {
             return (
               <div
                 key={index}
-                className="bg-white p-4 rounded-md shadow-md hover:shadow-lg transition-shadow duration-300"
+                className="bg-white text-lg p-4 rounded-md shadow-md hover:shadow-lg transition-shadow duration-300"
               >
                 <h2 className="text-2xl sm:text-3xl font-semibold mb-3 text-green-500">
                   How Much Does It Cost?
@@ -95,7 +104,7 @@ const Usa = () => {
                     </li>
                   ))}
                 </ul>
-                <p className="text-gray-700 mt-3">
+                <p className="text-gray-700 mt-3 text-lg">
                   <span className="font-bold">Note:</span> {section?.note}
                 </p>
               </div>
@@ -104,7 +113,7 @@ const Usa = () => {
             return (
               <div
                 key={index}
-                className="bg-white p-4 rounded-md shadow-md hover:shadow-lg transition-shadow duration-300"
+                className="bg-white text-lg p-4 rounded-md shadow-md hover:shadow-lg transition-shadow duration-300"
               >
                 <h2 className="text-2xl sm:text-3xl font-semibold mb-3 text-yellow-500">
                   In Depth Details

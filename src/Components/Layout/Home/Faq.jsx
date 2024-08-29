@@ -64,8 +64,8 @@ const Faq = () => {
     <div className="bg-[#F2F4FF] max-h-auto">
       <section className="max-w-5xl mx-auto py-10 sm:py-20">
         <div className="flex items-center justify-center flex-col gap-y-2 py-5">
-          <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold">Frequently Asked Questions</h1>
-          <p className="text-lg font-medium text-slate-700/70">Questions related New Era Consultancy</p>
+          <h1 className="text-3xl md:text-5xl font-bold">Frequently Asked Questions</h1>
+          <p className="text-xl font-medium text-slate-700/70">Questions related New Era Consultancy</p>
         </div>
         <div className="w-full px-7 md:px-10 xl:px-2 py-4">
           <div className="mx-auto w-full max-w-5xl border border-slate-400/20 rounded-lg bg-white">
@@ -74,7 +74,7 @@ const Faq = () => {
                 <button
                   onClick={() => toggle(id)}
                   aria-expanded={expanded === id}
-                  className="question-btn flex w-full items-start gap-x-5 justify-between rounded-lg text-left text-lg font-bold text-slate-800 focus:outline-none p-5"
+                  className="question-btn flex w-full items-start gap-x-5 justify-between rounded-lg text-left text-xl font-bold text-slate-800 focus:outline-none p-5"
                 >
                   <span>{question}</span>
                   <svg
@@ -98,7 +98,7 @@ const Faq = () => {
                   }`}
                   id={`answer-${id}`}
                 >
-                  <div className="pt-2 pb-5 px-5 text-sm lg:text-base text-[#343E3A] font-medium">
+                  <div className="pt-2 pb-5 px-5 text-sm lg:text-lg text-[#343E3A] font-medium">
                     {answer}
                   </div>
                 </div>

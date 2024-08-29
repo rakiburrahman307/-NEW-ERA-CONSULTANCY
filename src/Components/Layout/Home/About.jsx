@@ -37,11 +37,11 @@ const About = () => {
       >
         <h2
           id='about-us-heading'
-          className='text-4xl text-customBg font-bold mb-4'
+          className='text-3xl sm:text-5xl text-customBg font-bold mb-4'
         >
           About Us
         </h2>
-        <p className='text-lg leading-relaxed line-clamp-3 mb-5'>
+        <p className='text-xl leading-relaxed line-clamp-3 mb-5'>
           New Era Consultancy is a leading consultancy firm established in
           Dhaka, The Capital city of Bangladesh.
         </p>

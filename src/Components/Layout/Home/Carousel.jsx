@@ -35,16 +35,16 @@ const Carousel = () => {
   const textField = (
     <div className='absolute inset-0 flex items-center justify-start bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0.00)]'>
       <div
-        className='w-full px-5 md:p-10 text-white space-y-3 md:space-y-8 md:max-w-4xl mx-auto'
+        className='w-full px-5 md:p-10 text-white space-y-3 md:space-y-8 md:max-w-7xl mx-auto'
         data-aos='zoom-in-left'
       >
-        <h2 className='md:text-4xl font-bold text-left'>
+        <h2 className='md:text-5xl font-bold text-left'>
           <span className='text-white'>Welcome</span> <br />
           <TypeAnimation
             preRenderFirstString={true}
             sequence={[500, "To New Era", 1000, "To New Era Consultancy", 500]}
             speed={50}
-            className=' text-3xl md:text-6xl text-customBg'
+            className=' text-3xl md:text-7xl text-customBg'
             repeat={Infinity}
           />
         </h2>
