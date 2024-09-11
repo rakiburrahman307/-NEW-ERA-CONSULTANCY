@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Helmet } from "react-helmet";
 
 const uk = [
@@ -83,8 +84,10 @@ const uk = [
 ];
 
 const Uk = () => {
+  const [activeTab, setActiveTab] = useState("about");
+
   return (
-    <div className="p-6 bg-gray-100 min-h-screen">
+    <div className="flex flex-col lg:flex-row items-start p-6 bg-gray-100 min-h-screen md:text-justify">
       <Helmet>
         <title>UK Education Details</title>
         <meta
@@ -93,24 +96,52 @@ const Uk = () => {
         />
       </Helmet>
 
-      {/* About Section */}
-      {uk[0]?.about && (
-        <section className="mb-8 bg-white p-6 rounded-lg shadow-md transition-transform transform hover:scale-105">
-          <h2 className="text-2xl font-bold mb-4 text-blue-600">About UK</h2>
-          <p className="text-gray-700 text-lg">{uk[0]?.about}</p>
-        </section>
-      )}
+      {/* Tabs Navigation */}
+      <div
+        className="flex lg:flex-col overflow-x-auto w-full lg:overflow-visible lg:w-1/4 mb-4 lg:mb-0 lg:mr-3 space-x-3 lg:space-x-0 lg:space-y-2"
+        role="tablist"
+        aria-orientation="vertical"
+      >
+        {[
+          { id: "about", label: "About" },
+          { id: "educationSystem", label: "Education System" },
+          { id: "secondaryEducation", label: "Secondary Education" },
+          { id: "studyCost", label: "Study Cost" },
+          { id: "livingCost", label: "Living Cost" },
+          { id: "howMuchCost", label: "Cost Details" },
+          { id: "details", label: "In-depth Details" },
+        ].map((tab) => (
+          <button
+            key={tab.id}
+            className={`${
+              activeTab === tab.id
+                ? "bg-customBg  text-white"
+                : "bg-gray-200 text-gray-700 hover:bg-blue-100"
+            } py-2 px-4 rounded text-left whitespace-nowrap flex-shrink-0`}
+            onClick={() => setActiveTab(tab.id)}
+          >
+            {tab.label}
+          </button>
+        ))}
+      </div>
 
-      {/* Education System Section */}
-      {uk[1]?.education_system &&
-        uk[1]?.education_system?.map((edu, index) => (
+      {/* Tab Content */}
+      <div className="flex-grow lg:w-3/4">
+        {/* About UK */}
+        {activeTab === "about" && (
+          <section className="mb-8 bg-white p-6 rounded-lg shadow-lg transition-transform transform">
+            <h2 className="text-2xl font-bold mb-4 text-gray-800">About UK</h2>
+            <p className="text-gray-700 text-lg">{uk[0]?.about}</p>
+          </section>
+        )}
+
+        {/* UK Education System */}
+        {activeTab === "educationSystem" && uk[1]?.education_system?.map((edu, index) => (
           <section
             key={index}
-            className="mb-8 text-lg bg-white p-6 rounded-lg shadow-md transition-transform transform hover:scale-105"
+            className="mb-8 text-lg bg-white p-6 rounded-lg shadow-lg transition-transform transform"
           >
-            <h2 className="text-2xl font-bold mb-4 text-green-600">
-              UK Education System
-            </h2>
+            <h2 className="text-2xl font-bold mb-4 text-gray-800">UK Education System</h2>
             <p className="mb-4 text-gray-700">{edu?.description}</p>
             {edu?.point && (
               <ul className="list-disc list-inside mb-4 text-gray-600">
@@ -122,16 +153,12 @@ const Uk = () => {
                 ))}
               </ul>
             )}
-            <h3 className="text-2xl font-semibold mb-2 text-yellow-600">
-              {edu?.overView_title}
-            </h3>
+            <h3 className="text-2xl font-semibold mb-2 text-gray-800">{edu?.overView_title}</h3>
             {edu?.overview && (
               <ul className="list-none list-inside text-justify">
                 {edu?.overview?.map((item, i) => (
                   <div key={i}>
-                    <h2 className="text-xl text-black font-bold">
-                      {Object.values(item)[0]}
-                    </h2>
+                    <h2 className="text-xl text-black font-bold">{Object.values(item)[0]}</h2>
                     <li className="mb-5">{Object.values(item)[1]}</li>
                   </div>
                 ))}
@@ -140,70 +167,67 @@ const Uk = () => {
           </section>
         ))}
 
-      {/* Secondary Education Checklist Section */}
-      {uk[2]?.secondary_education && (
-        <section className="mb-8 text-lg bg-white p-6 rounded-lg shadow-md transition-transform transform hover:scale-105">
-          <h2 className="text-2xl font-bold mb-4 text-purple-600">
-            Secondary Education
-          </h2>
-          <p className="mb-4 text-gray-700">{uk[3]?.secondary_education}</p>
-          {uk[2]?.checklist && (
-            <ul className="list-disc list-inside mb-4 text-gray-600">
-              {uk[2]?.checklist?.map((item, i) => (
-                <li key={i} className="mb-2">
-                  {item?.value}
-                </li>
-              ))}
-            </ul>
-          )}
-          {uk[2]?.note && (
-            <p className="font-semibold text-gray-800">
-              <strong>Note:</strong> {uk[2]?.note}
-            </p>
-          )}
-        </section>
-      )}
+        {/* Secondary Education */}
+        {activeTab === "secondaryEducation" && (
+          <section className="mb-8 text-lg bg-white p-6 rounded-lg shadow-lg transition-transform transform">
+            <h2 className="text-2xl font-bold mb-4 text-gray-800">Secondary Education</h2>
+            <p className="mb-4 text-gray-700">{uk[2]?.secondary_education}</p>
+            {uk[2]?.checklist && (
+              <ul className="list-disc list-inside mb-4 text-gray-600">
+                {uk[2]?.checklist?.map((item, i) => (
+                  <li key={i} className="mb-2">{item?.value}</li>
+                ))}
+              </ul>
+            )}
+            {uk[2]?.note && (
+              <p className="font-semibold text-gray-800">
+                <strong>Note:</strong> {uk[2]?.note}
+              </p>
+            )}
+          </section>
+        )}
 
-      {/* Study Cost Section */}
-      {uk[3]?.study_cost && (
-        <section className="mb-8 text-lg bg-white p-6 rounded-lg shadow-md transition-transform transform hover:scale-105">
-          <h2 className="text-2xl font-bold mb-4 text-teal-600">Study Cost</h2>
-          <p className="text-gray-700">{uk[3]?.study_cost}</p>
-        </section>
-      )}
-      {/* Living Cost Section */}
-      {uk[4]?.living_cost && (
-        <section className="mb-8 text-lg bg-white p-6 rounded-lg shadow-md transition-transform transform hover:scale-105">
-          <h2 className="text-2xl font-bold mb-4 text-red-600">Living Cost</h2>
-          <p className="text-gray-700">{uk[4]?.living_cost}</p>
-        </section>
-      )}
-      {/* How Much Cost Section */}
-      {uk[5]?.how_much_cost && (
-        <section className="mb-8 text-lg bg-white p-6 rounded-lg shadow-md transition-transform transform hover:scale-105">
-          <h2 className="text-2xl font-bold mb-4 text-teal-600">
-          How much does it cost to study?
-          </h2>
-          {uk[5]?.how_much_cost?.map((item, i) => (
-            <p key={i} className="mb-2 text-gray-700">
-              <strong className="text-gray-900">{item?.key}:</strong> {item?.value}
-            </p>
-          ))}
-          {uk[5]?.note && (
-            <p className="font-semibold text-gray-800">
-              <strong>Note:</strong> {uk[5]?.note}
-            </p>
-          )}
-        </section>
-      )}
+        {/* Study Cost */}
+        {activeTab === "studyCost" && (
+          <section className="mb-8 text-lg bg-white p-6 rounded-lg shadow-lg transition-transform transform">
+            <h2 className="text-2xl font-bold mb-4 text-gray-800">Study Cost</h2>
+            <p className="text-gray-700">{uk[3]?.study_cost}</p>
+          </section>
+        )}
 
-      {/* Details Section */}
-      {uk[6]?.details && (
-        <section className="mb-8 text-lg bg-white p-6 rounded-lg shadow-md transition-transform transform hover:scale-105">
-          <h2 className="text-2xl font-bold mb-4 text-indigo-600">In-depth Details</h2>
-          <p className="text-gray-700">{uk[6]?.details}</p>
-        </section>
-      )}
+        {/* Living Cost */}
+        {activeTab === "livingCost" && (
+          <section className="mb-8 text-lg bg-white p-6 rounded-lg shadow-lg transition-transform transform">
+            <h2 className="text-2xl font-bold mb-4 text-gray-800">Living Cost</h2>
+            <p className="text-gray-700">{uk[4]?.living_cost}</p>
+          </section>
+        )}
+
+        {/* How Much Does it Cost to Study? */}
+        {activeTab === "howMuchCost" && (
+          <section className="mb-8 text-lg bg-white p-6 rounded-lg shadow-lg transition-transform transform">
+            <h2 className="text-2xl font-bold mb-4 text-gray-800">How Much Does it Cost to Study?</h2>
+            {uk[5]?.how_much_cost?.map((item, i) => (
+              <p key={i} className="mb-2 text-gray-700">
+                <strong className="text-gray-900">{item?.key}:</strong> {item?.value}
+              </p>
+            ))}
+            {uk[5]?.note && (
+              <p className="font-semibold text-gray-800">
+                <strong>Note:</strong> {uk[5]?.note}
+              </p>
+            )}
+          </section>
+        )}
+
+        {/* In-depth Details */}
+        {activeTab === "details" && (
+          <section className="mb-8 text-lg bg-white p-6 rounded-lg shadow-lg transition-transform transform">
+            <h2 className="text-2xl font-bold mb-4 text-gray-800">In-depth Details</h2>
+            <p className="text-gray-700">{uk[6]?.details}</p>
+          </section>
+        )}
+      </div>
     </div>
   );
 };

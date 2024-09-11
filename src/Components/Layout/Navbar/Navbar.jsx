@@ -72,7 +72,7 @@ const Navbar = () => {
         <div className='flex-1 flex flex-col'>
           <div className='bg-navBg shadow w-full'>
             <div className='mx-auto'>
-              <div className='flex justify-between items-center py-4 px-5 max-w-[1920px] mx-auto'>
+              <div className='flex justify-between items-center py-4 px-5 max-w-[1440px] mx-auto'>
                 <Link to='/' className="flex flex-col justify-center items-center" aria-label='New Era Consultancy Home'>
                 <img src={logo} alt="New Era Consultancy" className="w-16 h-8"/>
                   <h2 className='text-xs font-bold text-center text-customTextColor whitespace-pre-line'>

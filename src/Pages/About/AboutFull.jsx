@@ -12,7 +12,7 @@ const AboutFull = () => {
   };
 
   return (
-    <div className='mt-10'>
+    <div className='mt-10 max-w-[1920px] mx-auto'>
       {/* Full-width Banner */}
       <div className='w-full h-[60vh] md:h-[80vh]'>
         <img

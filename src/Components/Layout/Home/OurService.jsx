@@ -7,7 +7,7 @@ const OurService = () => {
 
   return (
     <section className='bg-white py-16 overflow-x-hidden'>
-      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center md:flex-row md:space-x-8'>
+      <div className='max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center md:flex-row md:space-x-8'>
         <div className='md:w-1/2 mb-8 md:mb-0' data-aos='fade-right'>
           <h2 className='text-3xl md:text-5xl text-customBg font-bold mb-4'>Our Services</h2>
           <p className='text-gray-700 text-xl mb-4 text-justify'>

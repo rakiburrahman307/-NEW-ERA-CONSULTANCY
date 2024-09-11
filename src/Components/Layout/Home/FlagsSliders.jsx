@@ -21,6 +21,7 @@ const FlagsSliders = () => {
     autoplay: true,
     speed: 1000,
     autoplaySpeed: 2000,
+    arrows: false,
     cssEase: "ease-in-out",
     responsive: [
       {
@@ -71,7 +72,7 @@ const FlagsSliders = () => {
       strength={500}
       className="my-10"
     >
-      <section className="py-10">
+      <section className="py-10 max-w-[1440px] mx-auto">
         <h2 className="text-3xl sm:text-5xl font-black text-customBg text-center mb-8" data-aos="zoom-in">
           Countries We Work With
         </h2>

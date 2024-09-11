@@ -16,12 +16,13 @@ const TopNavInfo = () => {
 
   return (
     <header
-      className={`max-w-[1920px] bg-customBg w-full mx-auto h-10 px-5 md:px-20 flex items-center justify-between fixed top-0 transition-transform duration-300 ${
+      className={`max-w-[1920px] bg-customBg w-full mx-auto h-13 px-5 md:px-20 fixed top-0 transition-transform duration-300 ${
         scrollY > 50 ? "-translate-y-full" : "translate-y-0"
       }`}
       role="banner"
     >
-      <h3 className='text-base text-black font-bold'>
+   <div className="max-w-[1440px] flex items-center justify-between mx-auto">
+   <h3 className='text-base text-black font-bold'>
         Contact Us: +880 01700000000
       </h3>
       <div className='flex justify-center items-center'>
@@ -67,6 +68,7 @@ const TopNavInfo = () => {
             loading='lazy'
           />
         </a>
+   </div>
       </div>
     </header>
   );

@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { Parallax } from "react-parallax";
-import img2 from "../../../assets/banner/6.jpg";
-import img3 from "../../../assets/banner/6.jpg";
-import img4 from "../../../assets/banner/6.jpg";
-import img7 from "../../../assets/banner/7.jpg";
+import img2 from "../../../assets/banner/2.jpg";
+import img3 from "../../../assets/banner/3.jpg";
+import img4 from "../../../assets/banner/4.jpg";
+import img5 from "../../../assets/banner/5.jpg";
 
 const OurMissionVision = () => {
   // State to track if images are loaded
@@ -22,7 +22,7 @@ const OurMissionVision = () => {
     <section>
       <Parallax
         blur={{ min: -1, max: 3 }}
-        bgImage={img7}
+        bgImage={img5}
         bgImageAlt='Vision Background'
         strength={500}
         className='mt-10'
