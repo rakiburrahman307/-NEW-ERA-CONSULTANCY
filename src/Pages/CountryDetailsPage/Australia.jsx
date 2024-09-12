@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Helmet } from "react-helmet";
-import "./style.css";
+
 
 const australia = [
   {
