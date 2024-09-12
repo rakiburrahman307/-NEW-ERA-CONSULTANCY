@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Helmet } from "react-helmet";
-
+import "./style.css";
 const usa = [
   {
     why_choose_usa: [
@@ -35,20 +35,20 @@ const Usa = () => {
   const [activeTab, setActiveTab] = useState("whyChooseUsa");
 
   return (
-    <div className="flex flex-col lg:flex-row items-start p-6 bg-gray-50 min-h-screen md:text-justify">
+    <div className='flex flex-col lg:flex-row items-start p-6 bg-gray-50 min-h-screen md:text-justify'>
       <Helmet>
         <title>USA Education Details</title>
         <meta
-          name="description"
-          content="Detailed information about education in the USA, including admission requirements, living costs, and facilities."
+          name='description'
+          content='Detailed information about education in the USA, including admission requirements, living costs, and facilities.'
         />
       </Helmet>
 
       {/* Tabs Navigation */}
       <div
-        className="flex lg:flex-col overflow-x-auto w-full lg:overflow-visible lg:w-1/4 mb-4 lg:mb-0 lg:mr-3 space-x-3 lg:space-x-0 lg:space-y-2"
-        role="tablist"
-        aria-orientation="vertical"
+        className='flex lg:flex-col overflow-x-auto w-full lg:overflow-visible lg:w-1/4 mb-4 lg:mb-0 lg:mr-3 space-x-3 lg:space-x-0 lg:space-y-2'
+        role='tablist'
+        aria-orientation='vertical'
       >
         {[
           { id: "whyChooseUsa", label: "Why Choose USA?" },
@@ -72,14 +72,14 @@ const Usa = () => {
       </div>
 
       {/* Tab Content */}
-      <div className="flex-grow lg:w-3/4">
+      <div className='flex-grow lg:w-3/4'>
         {/* Why Choose USA */}
         {activeTab === "whyChooseUsa" && (
-          <section className="mb-8 bg-white p-6 rounded-lg shadow-lg transition-transform transform">
-            <h2 className="text-2xl sm:text-3xl font-semibold mb-3 text-gray-800">
+          <section className='mb-8 bg-white p-6 rounded-lg shadow-lg transition-transform transform'>
+            <h2 className='text-2xl sm:text-3xl font-semibold mb-3 text-gray-800'>
               Why Choose USA as a Study Destination?
             </h2>
-            <ul className="list-disc list-inside space-y-2 text-gray-700">
+            <ul className='list-disc list-inside space-y-2 text-gray-700'>
               {usa[0]?.why_choose_usa?.map((item, i) => (
                 <li key={i}>{item}</li>
               ))}
@@ -89,50 +89,51 @@ const Usa = () => {
 
         {/* Study Cost */}
         {activeTab === "studyCost" && (
-          <section className="mb-8 bg-white p-6 rounded-lg shadow-lg transition-transform transform">
-            <h2 className="text-2xl sm:text-3xl font-semibold mb-3 text-gray-800">
+          <section className='mb-8 bg-white p-6 rounded-lg shadow-lg transition-transform transform'>
+            <h2 className='text-2xl sm:text-3xl font-semibold mb-3 text-gray-800'>
               How Much Does It Cost to Study?
             </h2>
-            <p className="text-gray-700">{usa[1]?.study_cost}</p>
+            <p className='text-gray-700'>{usa[1]?.study_cost}</p>
           </section>
         )}
 
         {/* Living Cost */}
         {activeTab === "livingCost" && (
-          <section className="mb-8 bg-white p-6 rounded-lg shadow-lg transition-transform transform">
-            <h2 className="text-2xl sm:text-3xl font-semibold mb-3 text-gray-800">
+          <section className='mb-8 bg-white p-6 rounded-lg shadow-lg transition-transform transform'>
+            <h2 className='text-2xl sm:text-3xl font-semibold mb-3 text-gray-800'>
               Living Cost
             </h2>
-            <p className="text-gray-700">{usa[2]?.living_cost}</p>
+            <p className='text-gray-700'>{usa[2]?.living_cost}</p>
           </section>
         )}
 
         {/* Cost Details */}
         {activeTab === "howMuchCost" && (
-          <section className="mb-8 bg-white p-6 rounded-lg shadow-lg transition-transform transform">
-            <h2 className="text-2xl sm:text-3xl font-semibold mb-3 text-gray-800">
+          <section className='mb-8 bg-white p-6 rounded-lg shadow-lg transition-transform transform'>
+            <h2 className='text-2xl sm:text-3xl font-semibold mb-3 text-gray-800'>
               How Much Does It Cost?
             </h2>
-            <ul className="space-y-2 text-gray-700">
+            <ul className='space-y-2 text-gray-700'>
               {usa[3]?.how_much_cost?.map((item, i) => (
                 <li key={i}>
-                  <strong className="text-gray-900">{item?.key}:</strong> {item?.value}
+                  <strong className='text-gray-900'>{item?.key}:</strong>{" "}
+                  {item?.value}
                 </li>
               ))}
             </ul>
-            <p className="text-gray-700 mt-3 text-lg">
-              <span className="font-bold">Note:</span> {usa[3]?.note}
+            <p className='text-gray-700 mt-3 text-lg'>
+              <span className='font-bold'>Note:</span> {usa[3]?.note}
             </p>
           </section>
         )}
 
         {/* In-depth Details */}
         {activeTab === "details" && (
-          <section className="mb-8 bg-white p-6 rounded-lg shadow-lg transition-transform transform">
-            <h2 className="text-2xl sm:text-3xl font-semibold mb-3 text-gray-800">
+          <section className='mb-8 bg-white p-6 rounded-lg shadow-lg transition-transform transform'>
+            <h2 className='text-2xl sm:text-3xl font-semibold mb-3 text-gray-800'>
               In-depth Details
             </h2>
-            <p className="text-gray-700">{usa[4]?.details}</p>
+            <p className='text-gray-700'>{usa[4]?.details}</p>
           </section>
         )}
       </div>

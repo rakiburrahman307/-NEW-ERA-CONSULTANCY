@@ -30,16 +30,17 @@ const AboutFull = () => {
           data-aos='fade-right'
           data-aos-duration='1000'
         >
-          <h2 className='text-3xl sm:text-5xl font-bold mb-4 text-customBg'>About Us</h2>
+          <h2 className='text-3xl sm:text-5xl font-bold mb-4 text-customBg'>
+            About Us
+          </h2>
           <p className='text-lg text-justify'>
-          New Era Consultancy is a leading consultancy firm established in Dhaka, The Capital city of Bangladesh. When we started a small and innovative business for helping Bangladeshi friends to study abroad, work and traveling around USA, UK, and Europe.
+            New Era Consultancy is a leading consultancy firm established in
+            Dhaka, The Capital city of Bangladesh. When we started a small and
+            innovative business for helping Bangladeshi friends to study abroad,
+            work and traveling around USA, UK, and Europe.
           </p>
         </div>
-        <div
-          className='md:w-1/2'
-          data-aos='fade-left'
-          data-aos-duration='1000'
-        >
+        <div className='md:w-1/2' data-aos='fade-left' data-aos-duration='1000'>
           <div
             className={`relative w-full h-full ${
               imageLoaded ? "blur-0" : "blur-lg"

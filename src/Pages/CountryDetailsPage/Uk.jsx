@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Helmet } from "react-helmet";
-
+import "./style.css";
 const uk = [
   {
     about:
@@ -59,8 +59,7 @@ const uk = [
       { value: "Statement of Purpose (SOP)." },
       { value: "Any other relevant certificate." },
     ],
-    note:
-      "Please contact us at New Era Consultancy personally for further assistance on the above and visa procedures.",
+    note: "Please contact us at New Era Consultancy personally for further assistance on the above and visa procedures.",
   },
   {
     study_cost:
@@ -87,20 +86,20 @@ const Uk = () => {
   const [activeTab, setActiveTab] = useState("about");
 
   return (
-    <div className="flex flex-col lg:flex-row items-start p-6 bg-gray-100 min-h-screen md:text-justify">
+    <div className='flex flex-col lg:flex-row items-start p-6 bg-gray-100 min-h-screen md:text-justify'>
       <Helmet>
         <title>UK Education Details</title>
         <meta
-          name="description"
-          content="Detailed information about education in the UK, including living costs, study costs, and admission requirements."
+          name='description'
+          content='Detailed information about education in the UK, including living costs, study costs, and admission requirements.'
         />
       </Helmet>
 
       {/* Tabs Navigation */}
       <div
-        className="flex lg:flex-col overflow-x-auto w-full lg:overflow-visible lg:w-1/4 mb-4 lg:mb-0 lg:mr-3 space-x-3 lg:space-x-0 lg:space-y-2"
-        role="tablist"
-        aria-orientation="vertical"
+        className='flex lg:flex-col overflow-x-auto w-full lg:overflow-visible lg:w-1/4 mb-4 lg:mb-0 lg:mr-3 space-x-3 lg:space-x-0 lg:space-y-2'
+        role='tablist'
+        aria-orientation='vertical'
       >
         {[
           { id: "about", label: "About" },
@@ -126,61 +125,72 @@ const Uk = () => {
       </div>
 
       {/* Tab Content */}
-      <div className="flex-grow lg:w-3/4">
+      <div className='flex-grow lg:w-3/4'>
         {/* About UK */}
         {activeTab === "about" && (
-          <section className="mb-8 bg-white p-6 rounded-lg shadow-lg transition-transform transform">
-            <h2 className="text-2xl font-bold mb-4 text-gray-800">About UK</h2>
-            <p className="text-gray-700 text-lg">{uk[0]?.about}</p>
+          <section className='mb-8 bg-white p-6 rounded-lg shadow-lg transition-transform transform'>
+            <h2 className='text-2xl font-bold mb-4 text-gray-800'>About UK</h2>
+            <p className='text-gray-700 text-lg'>{uk[0]?.about}</p>
           </section>
         )}
 
         {/* UK Education System */}
-        {activeTab === "educationSystem" && uk[1]?.education_system?.map((edu, index) => (
-          <section
-            key={index}
-            className="mb-8 text-lg bg-white p-6 rounded-lg shadow-lg transition-transform transform"
-          >
-            <h2 className="text-2xl font-bold mb-4 text-gray-800">UK Education System</h2>
-            <p className="mb-4 text-gray-700">{edu?.description}</p>
-            {edu?.point && (
-              <ul className="list-disc list-inside mb-4 text-gray-600">
-                {edu?.point?.map((item, i) => (
-                  <li key={i} className="mb-2">
-                    <strong className="text-gray-900">{item?.key}</strong>{" "}
+        {activeTab === "educationSystem" &&
+          uk[1]?.education_system?.map((edu, index) => (
+            <section
+              key={index}
+              className='mb-8 text-lg bg-white p-6 rounded-lg shadow-lg transition-transform transform'
+            >
+              <h2 className='text-2xl font-bold mb-4 text-gray-800'>
+                UK Education System
+              </h2>
+              <p className='mb-4 text-gray-700'>{edu?.description}</p>
+              {edu?.point && (
+                <ul className='list-disc list-inside mb-4 text-gray-600'>
+                  {edu?.point?.map((item, i) => (
+                    <li key={i} className='mb-2'>
+                      <strong className='text-gray-900'>{item?.key}</strong>{" "}
+                      {item?.value}
+                    </li>
+                  ))}
+                </ul>
+              )}
+              <h3 className='text-2xl font-semibold mb-2 text-gray-800'>
+                {edu?.overView_title}
+              </h3>
+              {edu?.overview && (
+                <ul className='list-none list-inside text-justify'>
+                  {edu?.overview?.map((item, i) => (
+                    <div key={i}>
+                      <h2 className='text-xl text-black font-bold'>
+                        {Object.values(item)[0]}
+                      </h2>
+                      <li className='mb-5'>{Object.values(item)[1]}</li>
+                    </div>
+                  ))}
+                </ul>
+              )}
+            </section>
+          ))}
+
+        {/* Secondary Education */}
+        {activeTab === "secondaryEducation" && (
+          <section className='mb-8 text-lg bg-white p-6 rounded-lg shadow-lg transition-transform transform'>
+            <h2 className='text-2xl font-bold mb-4 text-gray-800'>
+              Secondary Education
+            </h2>
+            <p className='mb-4 text-gray-700'>{uk[2]?.secondary_education}</p>
+            {uk[2]?.checklist && (
+              <ul className='list-disc list-inside mb-4 text-gray-600'>
+                {uk[2]?.checklist?.map((item, i) => (
+                  <li key={i} className='mb-2'>
                     {item?.value}
                   </li>
                 ))}
               </ul>
             )}
-            <h3 className="text-2xl font-semibold mb-2 text-gray-800">{edu?.overView_title}</h3>
-            {edu?.overview && (
-              <ul className="list-none list-inside text-justify">
-                {edu?.overview?.map((item, i) => (
-                  <div key={i}>
-                    <h2 className="text-xl text-black font-bold">{Object.values(item)[0]}</h2>
-                    <li className="mb-5">{Object.values(item)[1]}</li>
-                  </div>
-                ))}
-              </ul>
-            )}
-          </section>
-        ))}
-
-        {/* Secondary Education */}
-        {activeTab === "secondaryEducation" && (
-          <section className="mb-8 text-lg bg-white p-6 rounded-lg shadow-lg transition-transform transform">
-            <h2 className="text-2xl font-bold mb-4 text-gray-800">Secondary Education</h2>
-            <p className="mb-4 text-gray-700">{uk[2]?.secondary_education}</p>
-            {uk[2]?.checklist && (
-              <ul className="list-disc list-inside mb-4 text-gray-600">
-                {uk[2]?.checklist?.map((item, i) => (
-                  <li key={i} className="mb-2">{item?.value}</li>
-                ))}
-              </ul>
-            )}
             {uk[2]?.note && (
-              <p className="font-semibold text-gray-800">
+              <p className='font-semibold text-gray-800'>
                 <strong>Note:</strong> {uk[2]?.note}
               </p>
             )}
@@ -189,31 +199,38 @@ const Uk = () => {
 
         {/* Study Cost */}
         {activeTab === "studyCost" && (
-          <section className="mb-8 text-lg bg-white p-6 rounded-lg shadow-lg transition-transform transform">
-            <h2 className="text-2xl font-bold mb-4 text-gray-800">Study Cost</h2>
-            <p className="text-gray-700">{uk[3]?.study_cost}</p>
+          <section className='mb-8 text-lg bg-white p-6 rounded-lg shadow-lg transition-transform transform'>
+            <h2 className='text-2xl font-bold mb-4 text-gray-800'>
+              Study Cost
+            </h2>
+            <p className='text-gray-700'>{uk[3]?.study_cost}</p>
           </section>
         )}
 
         {/* Living Cost */}
         {activeTab === "livingCost" && (
-          <section className="mb-8 text-lg bg-white p-6 rounded-lg shadow-lg transition-transform transform">
-            <h2 className="text-2xl font-bold mb-4 text-gray-800">Living Cost</h2>
-            <p className="text-gray-700">{uk[4]?.living_cost}</p>
+          <section className='mb-8 text-lg bg-white p-6 rounded-lg shadow-lg transition-transform transform'>
+            <h2 className='text-2xl font-bold mb-4 text-gray-800'>
+              Living Cost
+            </h2>
+            <p className='text-gray-700'>{uk[4]?.living_cost}</p>
           </section>
         )}
 
         {/* How Much Does it Cost to Study? */}
         {activeTab === "howMuchCost" && (
-          <section className="mb-8 text-lg bg-white p-6 rounded-lg shadow-lg transition-transform transform">
-            <h2 className="text-2xl font-bold mb-4 text-gray-800">How Much Does it Cost to Study?</h2>
+          <section className='mb-8 text-lg bg-white p-6 rounded-lg shadow-lg transition-transform transform'>
+            <h2 className='text-2xl font-bold mb-4 text-gray-800'>
+              How Much Does it Cost to Study?
+            </h2>
             {uk[5]?.how_much_cost?.map((item, i) => (
-              <p key={i} className="mb-2 text-gray-700">
-                <strong className="text-gray-900">{item?.key}:</strong> {item?.value}
+              <p key={i} className='mb-2 text-gray-700'>
+                <strong className='text-gray-900'>{item?.key}:</strong>{" "}
+                {item?.value}
               </p>
             ))}
             {uk[5]?.note && (
-              <p className="font-semibold text-gray-800">
+              <p className='font-semibold text-gray-800'>
                 <strong>Note:</strong> {uk[5]?.note}
               </p>
             )}
@@ -222,9 +239,11 @@ const Uk = () => {
 
         {/* In-depth Details */}
         {activeTab === "details" && (
-          <section className="mb-8 text-lg bg-white p-6 rounded-lg shadow-lg transition-transform transform">
-            <h2 className="text-2xl font-bold mb-4 text-gray-800">In-depth Details</h2>
-            <p className="text-gray-700">{uk[6]?.details}</p>
+          <section className='mb-8 text-lg bg-white p-6 rounded-lg shadow-lg transition-transform transform'>
+            <h2 className='text-2xl font-bold mb-4 text-gray-800'>
+              In-depth Details
+            </h2>
+            <p className='text-gray-700'>{uk[6]?.details}</p>
           </section>
         )}
       </div>

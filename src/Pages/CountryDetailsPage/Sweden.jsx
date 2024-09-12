@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Helmet } from "react-helmet";
-
+import "./style.css";
 const sweden = [
   {
     about:
@@ -149,7 +149,9 @@ const Sweden = () => {
         {/* Facilities */}
         {activeTab === "facility" && (
           <section className='mb-8 bg-white p-6 rounded-lg shadow-lg transition-transform transform'>
-            <h2 className='text-2xl font-bold mb-4 text-gray-800'>Facilities</h2>
+            <h2 className='text-2xl font-bold mb-4 text-gray-800'>
+              Facilities
+            </h2>
             <ul className='list-disc list-inside text-lg text-gray-600'>
               {sweden[3].facility.map((item, index) => (
                 <li key={index} className='mb-2'>
@@ -180,7 +182,9 @@ const Sweden = () => {
         {/* Living Cost */}
         {activeTab === "livingCost" && (
           <section className='mb-8 bg-white p-6 rounded-lg shadow-lg transition-transform transform'>
-            <h2 className='text-2xl font-bold mb-4 text-gray-800'>Living Cost</h2>
+            <h2 className='text-2xl font-bold mb-4 text-gray-800'>
+              Living Cost
+            </h2>
             <p className='text-gray-700 text-lg'>{sweden[4].living_costs}</p>
           </section>
         )}

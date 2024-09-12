@@ -1,5 +1,9 @@
-import { useState } from 'react';
-import Slider from 'react-slick';
+import { useState } from "react";
+import Slider from "react-slick";
+import img1 from "../../../assets/achievements/1.jpg";
+import img2 from "../../../assets/achievements/2.jpg";
+import img3 from "../../../assets/achievements/3.jpg";
+import img4 from "../../../assets/achievements/4.jpg";
 
 const OurAchievements = () => {
   const [loadedImages, setLoadedImages] = useState(new Set());
@@ -8,11 +12,11 @@ const OurAchievements = () => {
     className: "center",
     centerMode: true,
     infinite: true,
-    centerPadding: "60px",
+    centerPadding: "30px",
     slidesToShow: 3,
     speed: 500,
     autoplay: true,
-    autoplaySpeed: 1000,
+    autoplaySpeed: 2000,
     pauseOnHover: true,
     dots: false,
     arrows: false,
@@ -42,36 +46,47 @@ const OurAchievements = () => {
   };
 
   const achievements = [
-    { src: "https://source.unsplash.com/300x300/?trophy", alt: "Achievement 1", title: "Top Performer Award" },
-    { src: "https://source.unsplash.com/300x300/?medal", alt: "Achievement 2", title: "Innovation Excellence" },
-    { src: "https://source.unsplash.com/300x300/?award", alt: "Achievement 3", title: "Best Project Award" },
-    { src: "https://source.unsplash.com/300x300/?certificate", alt: "Achievement 4", title: "Outstanding Contribution" },
-    { src: "https://source.unsplash.com/300x300/?success", alt: "Achievement 5", title: "Achievement in Leadership" },
-    { src: "https://source.unsplash.com/300x300/?recognition", alt: "Achievement 6", title: "Excellence in Customer Service" },
+    { src: img1, alt: "Achievement 1" },
+    { src: img2, alt: "Achievement 2" },
+    { src: img3, alt: "Achievement 3" },
+    { src: img4, alt: "Achievement 4" },
   ];
 
   const handleImageLoad = (index) => {
-    setLoadedImages(prev => new Set(prev.add(index)));
+    setLoadedImages((prev) => new Set(prev.add(index)));
+  };
+
+  const handleImageError = (index) => {
+    // Handle image load error, maybe show a placeholder or log the error
+    console.error(`Image at index ${index} failed to load.`);
   };
 
   return (
     <div className='slider-container mx-auto px-4 py-10'>
-      <h2 className='text-3xl sm:text-5xl text-center text-customBg font-bold mb-4'>Our Achievements</h2>
+      <h2 className='text-3xl sm:text-5xl text-center text-customBg font-bold mb-8'>
+        Our Achievements
+      </h2>
       <Slider {...settings}>
         {achievements.map((achievement, index) => (
           <div key={index} className='flex flex-col items-center'>
-            <div className={`relative w-[110px] h-[110px] rounded-full overflow-hidden ${loadedImages.has(index) ? 'blur-0' : 'blur-lg transition-all duration-300 ease-in-out'}`}>
+            <div
+              className={`relative w-[330px] h-[200px] overflow-hidden ${
+                loadedImages.has(index)
+                  ? "blur-0"
+                  : "blur-lg transition-all duration-500 ease-in-out"
+              }`}
+            >
               <img
-                width={110}
-                height={110}
-                className="w-full h-full object-cover"
+                width={330}
+                height={200}
+                className='w-full h-full object-fill md:object-cover'
                 src={achievement.src}
                 alt={achievement.alt}
-                loading="lazy"
+                loading='lazy'
                 onLoad={() => handleImageLoad(index)}
+                onError={() => handleImageError(index)}
               />
             </div>
-            <h3 className='mt-2 text-xl font-semibold text-gray-800'>{achievement.title}</h3>
           </div>
         ))}
       </Slider>

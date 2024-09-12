@@ -3,7 +3,7 @@ import { FaBarsStaggered } from "react-icons/fa6";
 import { Link, NavLink } from "react-router-dom";
 import TopNavInfo from "./TopNavInfo";
 import MobileSidebar from "./MobileSlider";
-import logo from "../../../assets/logo/logo.png"
+import logo from "../../../assets/logo/logo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -73,10 +73,19 @@ const Navbar = () => {
           <div className='bg-navBg shadow w-full'>
             <div className='mx-auto'>
               <div className='flex justify-between items-center py-4 px-5 max-w-[1440px] mx-auto'>
-                <Link to='/' className="flex flex-col justify-center items-center" aria-label='New Era Consultancy Home'>
-                <img src={logo} alt="New Era Consultancy" className="w-16 h-8"/>
+                <Link
+                  to='/'
+                  className='flex flex-col justify-center items-center'
+                  aria-label='New Era Consultancy Home'
+                >
+                  <img
+                    src={logo}
+                    alt='New Era Consultancy'
+                    className='w-16 h-8'
+                  />
                   <h2 className='text-xs font-bold text-center text-customTextColor whitespace-pre-line'>
-                    NEW ERA <br /> <span className='text-xs text-black'>CONSULTANCY</span>
+                    NEW ERA <br />{" "}
+                    <span className='text-xs text-black'>CONSULTANCY</span>
                   </h2>
                 </Link>
 

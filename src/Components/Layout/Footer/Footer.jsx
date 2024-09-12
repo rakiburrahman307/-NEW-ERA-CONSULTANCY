@@ -1,6 +1,5 @@
 import footerLogo from "../../../assets/logo/logo.png";
-import { FaFacebook, FaRedditAlien, FaRss } from "react-icons/fa";
-import { IoLogoTwitter } from "react-icons/io";
+import { FaFacebook, FaWhatsapp } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -18,14 +17,14 @@ const Footer = () => {
     { name: "Czech Republic", link: "/study_abroad/czech_republic" },
   ];
   return (
-    <footer className='pt-20 bg-[#0E1E32] text-primary-content'>
+    <footer className='pt-16 bg-[#0E1E32] text-primary-content'>
       <div className='max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center'>
         {/* Logo and Branding */}
         <div className='flex flex-col items-center gap-2'>
           <img
             src={footerLogo}
             alt='New Era Consultancy Logo'
-            className='w-20 h-16 md:w-24 md:h-20'
+            className='w-20 h-14 md:w-20 md:h-16'
           />
           <p className='text-xl md:text-2xl text-white font-semibold'>
             New Era Consultancy
@@ -33,7 +32,7 @@ const Footer = () => {
         </div>
 
         {/* Quick Links */}
-        <div className='grid grid-cols-3 md:grid-cols-4 gap-4 text-center  mt-5 md:mt-0'>
+        <div className='grid grid-cols-3 md:grid-cols-4 gap-2 text-center mt-5 md:mt-0'>
           {/* Title spanning all columns */}
           <h2 className='col-span-3 md:col-span-4 text-lg text-white font-bold mb-2'>
             Quick Links
@@ -55,7 +54,7 @@ const Footer = () => {
             {miniNav?.map((item) => (
               <Link
                 to={item?.link}
-                key={item}
+                key={item?.name}
                 className='font-medium text-base text-white cursor-pointer hover:text-white/80 hover:scale-105 hover:underline'
               >
                 {item?.name}
@@ -63,32 +62,34 @@ const Footer = () => {
             ))}
           </div>
           <div className='flex gap-5'>
-            <FaRss
-              aria-label='RSS'
-              size={20}
-              className='text-white cursor-pointer hover:text-white/70 hover:scale-110'
-            />
-            <FaRedditAlien
-              aria-label='Reddit'
-              size={20}
-              className='text-white cursor-pointer hover:text-white/70 hover:scale-110'
-            />
-            <IoLogoTwitter
-              aria-label='Twitter'
-              size={20}
-              className='text-white cursor-pointer hover:text-white/70 hover:scale-110'
-            />
-            <FaFacebook
+            <a
+              href='https://wa.me/8801717155730'
+              target='_blank'
+              rel='noopener noreferrer'
+              aria-label='WhatsApp'
+            >
+              <FaWhatsapp
+                size={20}
+                className='text-white cursor-pointer hover:text-white/70 hover:scale-110'
+              />
+            </a>
+            <a
+              href='https://www.facebook.com/profile.php?id=100066718226419&mibextid=ZbWKwL'
+              target='_blank'
+              rel='noopener noreferrer'
               aria-label='Facebook'
-              size={20}
-              className='text-white cursor-pointer hover:text-white/70 hover:scale-110'
-            />
+            >
+              <FaFacebook
+                size={20}
+                className='text-white cursor-pointer hover:text-white/70 hover:scale-110'
+              />
+            </a>
           </div>
         </div>
       </div>
 
       {/* Footer Bottom Text */}
-      <div className='flex flex-col justify-center items-center mt-20 pb-5'>
+      <div className='flex flex-col justify-center items-center mt-10 pb-5'>
         <h4 className='text-white text-sm text-center'>
           &copy; 2024 New Era Consultancy. All Rights Reserved.
         </h4>

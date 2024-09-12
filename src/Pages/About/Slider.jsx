@@ -8,7 +8,6 @@ import photo1 from "../../assets/banner/1.jpg";
 import photo2 from "../../assets/banner/2.jpg";
 import photo3 from "../../assets/banner/3.jpg";
 
-
 // Import required modules
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import { useState } from "react";

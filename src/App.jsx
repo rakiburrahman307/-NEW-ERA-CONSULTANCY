@@ -2,7 +2,7 @@
 import { Suspense, lazy } from "react";
 import ErrorBoundary from "./ErrorBoundary";
 const Root = lazy(() => import("./Components/Layout/Root/Root"));
-import Loading from './Pages/Loading/Loading';
+import Loading from "./Pages/Loading/Loading";
 import TopScroll from "./Components/Layout/TopScroll/TopScroll";
 
 const App = () => {
@@ -10,11 +10,10 @@ const App = () => {
     <ErrorBoundary>
       <Suspense fallback={<Loading />}>
         <Root />
-        <TopScroll/>
+        <TopScroll />
       </Suspense>
     </ErrorBoundary>
   );
 };
 
 export default App;
-

@@ -85,7 +85,11 @@ const MobileSidebar = ({ isOpen, setIsOpen }) => {
                     className='transition-all duration-300 overflow-hidden max-h-0 opacity-0'
                   >
                     {item.submenu.map((subItem, subIndex) => (
-                      <Link to={subItem.link} key={subIndex}>
+                      <Link
+                        to={subItem.link}
+                        key={subIndex}
+                        onClick={handleSidebarClose}
+                      >
                         <li className='py-2 w-full hover:bg-gray-200'>
                           {subItem.label}
                         </li>
@@ -95,10 +99,12 @@ const MobileSidebar = ({ isOpen, setIsOpen }) => {
                 </>
               ) : (
                 <NavLink
-                className={({ isActive }) => `${
-                    isActive && `text-orange-500 animate-pulse`
-                  }`}
-                to={item.link}>
+                  className={({ isActive }) =>
+                    `${isActive && `text-orange-500 animate-pulse`}`
+                  }
+                  onClick={handleSidebarClose}
+                  to={item.link}
+                >
                   <li className='py-2 w-full hover:bg-gray-200'>
                     {item.label}
                   </li>

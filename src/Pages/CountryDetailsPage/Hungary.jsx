@@ -1,14 +1,16 @@
-import { useState } from 'react';
-import { Helmet } from 'react-helmet';
-
+import { useState } from "react";
+import { Helmet } from "react-helmet";
+import "./style.css";
 const hungary = [
   {
-    about: "Hungary is located in Central/Eastern Europe bordering Austria in the west and Romania in the East. Budapest is the capital city of Hungary. Dozens of universities across the country offer programs that are fully taught in English. There are hundreds of study programs available for international students. If you are looking for high-quality education, you have come to the right place. Hungarian universities have spawned many smart minds, including well-renowned scientists. Hungary is the best option for Bangladeshi students."
+    about:
+      "Hungary is located in Central/Eastern Europe bordering Austria in the west and Romania in the East. Budapest is the capital city of Hungary. Dozens of universities across the country offer programs that are fully taught in English. There are hundreds of study programs available for international students. If you are looking for high-quality education, you have come to the right place. Hungarian universities have spawned many smart minds, including well-renowned scientists. Hungary is the best option for Bangladeshi students.",
   },
   {
     admission_requirement: [
       {
-        description: "The following checklist will be helpful while applying in Hungary:"
+        description:
+          "The following checklist will be helpful while applying in Hungary:",
       },
       {
         point: [
@@ -18,10 +20,10 @@ const hungary = [
           { value: "6 copies of passport size photos" },
           { value: "Recommendation letter" },
           { value: "Language proficiency certificate" },
-          { value: "Bank statement & solvency certificate" }
-        ]
-      }
-    ]
+          { value: "Bank statement & solvency certificate" },
+        ],
+      },
+    ],
   },
   {
     facility: [
@@ -29,36 +31,39 @@ const hungary = [
       "Minimum IELTS requirement.",
       "As a student, you can work in Hungary (20 hours per week).",
       "Hungary is becoming an increasingly popular host country for international students, partly due to the Hungarian Scholarship.",
-      "The cost of living in Hungary is among the lowest in Europe."
-    ]
+      "The cost of living in Hungary is among the lowest in Europe.",
+    ],
   },
   {
     requirement: [
       {
         key: "Undergraduate",
-        value: "GPA 3.80/5.00. Language Proficiency Certificate IELTS - Minimum 5.5 or equivalent."
+        value:
+          "GPA 3.80/5.00. Language Proficiency Certificate IELTS - Minimum 5.5 or equivalent.",
       },
       {
         key: "Postgraduate",
-        value: "CGPA 2.50/4.00. Language Proficiency Certificate IELTS - Minimum 5.5 or equivalent."
-      }
-    ]
+        value:
+          "CGPA 2.50/4.00. Language Proficiency Certificate IELTS - Minimum 5.5 or equivalent.",
+      },
+    ],
   },
   {
-    living_cost: "For a single person, it costs around 500 to 900 EUR per month to maintain their living expenses."
+    living_cost:
+      "For a single person, it costs around 500 to 900 EUR per month to maintain their living expenses.",
   },
   {
     study_cost: [
       {
         key: "Undergraduate Bachelor Degree",
-        value: "4000 to 6000 EUR per year"
+        value: "4000 to 6000 EUR per year",
       },
       {
         key: "Postgraduate Master Degree",
-        value: "5000 to 8000 EUR per year"
-      }
-    ]
-  }
+        value: "5000 to 8000 EUR per year",
+      },
+    ],
+  },
 ];
 
 const Hungary = () => {
@@ -191,7 +196,8 @@ const Hungary = () => {
             <ul className='list-disc list-inside text-lg text-gray-600'>
               {hungary[5].study_cost.map((item, index) => (
                 <li key={index} className='mb-2'>
-                  <strong className='text-gray-900'>{item.key}</strong>: {item.value}
+                  <strong className='text-gray-900'>{item.key}</strong>:{" "}
+                  {item.value}
                 </li>
               ))}
             </ul>
