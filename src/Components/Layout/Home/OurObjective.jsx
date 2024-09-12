@@ -4,8 +4,8 @@ const OurObjective = () => {
   return (
     <section className="py-16 bg-gradient-to-r from-slate-500 to-slate-800 max-w-[1920px] mx-auto">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl sm:text-5xl font-extrabold text-customBg text-center mb-12" data-aos="zoom-in">
-          Our Objective
+        <h2 className="text-3xl md:text-5xl text-center leading-normal font-extrabold tracking-tight text-gray-100 mb-12" data-aos="zoom-in">
+          Our <span className='text-customBg'>Objective</span>
         </h2>
         <div className="bg-gradient-to-l from-slate-700 to-slate-900 p-8 rounded-lg shadow-lg relative">
           <TypeAnimation

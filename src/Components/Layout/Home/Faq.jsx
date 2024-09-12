@@ -75,8 +75,8 @@ const Faq = () => {
     <div className='bg-[#F2F4FF] max-h-auto'>
       <section className='max-w-5xl mx-auto py-10 sm:py-20'>
         <div className='flex items-center justify-center flex-col gap-y-2 py-5'>
-          <h1 className='text-3xl md:text-5xl font-bold text-center'>
-            Frequently Asked Questions
+          <h1 className='text-3xl md:text-5xl text-center leading-normal font-extrabold tracking-tight text-gray-900 mb-10'>
+            Frequently <span className='text-customBg'>Asked Questions</span>
           </h1>
           <p className='text-xl font-medium text-slate-700/70'>
             Questions related New Era Consultancy

@@ -37,9 +37,9 @@ const About = () => {
       >
         <h2
           id='about-us-heading'
-          className='text-3xl sm:text-5xl text-customBg font-bold mb-4'
+          className='text-3xl md:text-5xl leading-normal font-extrabold tracking-tight text-gray-900 mb-6'
         >
-          About Us
+          About <span className="text-customBg">Us</span>
         </h2>
         <p className='text-xl leading-relaxed line-clamp-3 mb-5'>
           New Era Consultancy is a leading consultancy firm established in

@@ -30,8 +30,8 @@ const AboutFull = () => {
           data-aos='fade-right'
           data-aos-duration='1000'
         >
-          <h2 className='text-3xl sm:text-5xl font-bold mb-4 text-customBg'>
-            About Us
+          <h2 className='text-3xl md:text-5xl leading-normal font-extrabold tracking-tight text-gray-900 mb-5'>
+            About <span className="text-customBg">Us</span>
           </h2>
           <p className='text-lg text-justify'>
             New Era Consultancy is a leading consultancy firm established in
@@ -71,10 +71,10 @@ const AboutFull = () => {
           data-aos='fade-left'
           data-aos-duration='1000'
         >
-          <h2 className='text-3xl sm:text-5xl text-customBg font-bold mb-1'>
-            New Era Consultancy
+          <h2 className='text-3xl md:text-5xl leading-normal font-extrabold tracking-tight text-gray-900 mb-5'>
+            New Era <span className="text-customBg">Consultancy</span>
           </h2>
-          <h3 className='text-xl font-bold mb-4'>
+          <h3 className='text-xl font-semibold mb-4'>
             Our Global Education Partner
           </h3>
           <p className='text-lg leading-relaxed text-justify mb-5'>
@@ -94,7 +94,7 @@ const AboutFull = () => {
       <div className='flex justify-center p-8'>
         <Link
           to='/'
-          className='inline-flex items-center border border-indigo-300 px-3 py-1.5 rounded-md text-indigo-500 hover:bg-indigo-50 transition-all'
+          className='inline-flex items-center border border-orange-400 px-3 py-1.5 rounded-md text-customBg hover:bg-indigo-50 transition-all'
         >
           <svg
             xmlns='http://www.w3.org/2000/svg'

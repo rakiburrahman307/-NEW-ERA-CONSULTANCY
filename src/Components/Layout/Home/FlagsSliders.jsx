@@ -73,8 +73,8 @@ const FlagsSliders = () => {
       className="my-10"
     >
       <section className="py-10 max-w-[1440px] mx-auto">
-        <h2 className="text-3xl sm:text-5xl font-black text-customBg text-center mb-8" data-aos="zoom-in">
-          Countries We Work With
+        <h2 className="text-3xl md:text-5xl text-center leading-normal font-extrabold tracking-tight text-gray-100 mb-8" data-aos="zoom-in">
+          Countries We <span className="text-customBg">Work With</span>
         </h2>
         <Slider {...settings}>
           {flags.map((flag, index) => (

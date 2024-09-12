@@ -4,16 +4,17 @@ import imgCharman from "../../../assets/team_member/charman.jpg";
 import imgDirector from "../../../assets/team_member/director.jpg";
 import imgDirector_2 from "../../../assets/team_member/director_abdullah.jpg";
 
+// Define the team members with names, roles, and image sources
 const teamMembers = [
+  {
+    name: "Jakia Akter Shumi",
+    role: "Charman",
+    imgSrc: imgCharman,
+  },
   {
     name: "Md. Taiful Islam",
     role: "CEO",
     imgSrc: imgCeo,
-  },
-  {
-    name: "Shumi Islam",
-    role: "Charman",
-    imgSrc: imgCharman,
   },
   {
     name: "Md. Afran Rahman Tonmoy",
@@ -27,67 +28,47 @@ const teamMembers = [
   },
 ];
 
+// Main team component
 const OurTeam = () => {
   const [loadedImages, setLoadedImages] = useState({});
 
+  // Function to handle image loading state
   const handleImageLoad = (index) => {
     setLoadedImages((prev) => ({ ...prev, [index]: true }));
   };
 
   return (
-    <section className='py-14 bg-white'>
-      <div className='max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between'>
-        <header className='text-left mb-10 sm:ml-10 md:ml-24 sm:w-6/12 order-first sm:order-last'>
-          <p className='mt-4 text-sm leading-7 text-gray-500 font-regular'>
-            THE TEAM
-          </p>
-          <h2 className='text-3xl sm:text-5xl leading-normal font-extrabold tracking-tight text-gray-900'>
-            Meet Our <span className='text-customBg'>Team</span>
-          </h2>
-          <p className='mt-4 text-lg leading-7 text-gray-500 font-light'>
-            Commitment is our resource through which we give our best effort to
-            ensure your service.
-            <br />
-            <br />
-            <p className="font-semibold">CEO</p>
-
-          </p>
-        </header>
-
-        <div className='sm:w-6/12 order-last sm:order-first'>
-          <ul className='grid grid-cols-2 gap-5 md:gap-10'>
-            {teamMembers.map((member, index) => (
-              <li
-                key={index}
-                className='bg-gray-100 p-5 py-10 text-center transition transform hover:shadow-2xl hover:scale-105 duration-300 ease-in-out'
-              >
-                <div className='flex flex-col items-center'>
-                  <div className='flex-shrink-0'>
-                    <img
-                      src={member.imgSrc}
-                      alt={`${member.name} profile`}
-                      className={`mb-3 rounded-full mx-auto h-24 w-24 transition duration-500 ease-in-out ${
-                        loadedImages[index] ? "filter-none" : "filter blur-lg"
-                      }`}
-                      onLoad={() => handleImageLoad(index)}
-                      loading='lazy'
-                    />
-                  </div>
-                  <div className='text-center'>
-                    <h3 className='text-lg leading-6 font-semibold text-gray-900'>
-                      <span className='hover:text-indigo-600 transition duration-300 ease-in-out'>
-                        {member.name}
-                      </span>
-                    </h3>
-                    <p className='text-sm leading-6 text-gray-500 uppercase'>
-                      {member.role}
-                    </p>
-                  </div>
-                </div>
-              </li>
-            ))}
-          </ul>
-        </div>
+    <section className='p-20 bg-white'>
+      <div className='text-center mb-16'>
+        <h3 className='text-3xl md:text-5xl leading-normal font-extrabold tracking-tight text-gray-900'>
+          Meet Our <span className='text-customBg'>Team</span>
+        </h3>
+        <p className='mt-4 text-center text-lg leading-7 text-gray-500'>
+          Commitment is our resource through which we give our best effort to
+          ensure your service.
+        </p>
+      </div>
+      <div className='sm:grid grid-cols-2 md:grid-cols-4 gap-14 mx-auto'>
+        {teamMembers?.map((member, index) => (
+          <div key={index} className='text-center'>
+            <img
+              className={`mb-3 rounded-full mx-auto h-32 w-32 transition duration-500 ease-in-out ${
+                loadedImages[index] ? "filter-none" : "filter blur-lg"
+              }`}
+              src={member.imgSrc}
+              alt={`${member.name} profile`}
+              onLoad={() => handleImageLoad(index)}
+              loading='lazy'
+            />
+            <a
+              href='#'
+              className='hover:text-customBg text-gray-900 font-semibold'
+            >
+              {member?.name}
+            </a>
+            <p className='text-gray-500 uppercase text-sm'>{member?.role}</p>
+          </div>
+        ))}
       </div>
     </section>
   );

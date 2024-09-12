@@ -39,10 +39,10 @@ const JobVisaCounselling = () => {
     <section className='py-16 bg-gradient-to-r from-slate-500 to-slate-800'>
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         <h1
-          className='text-3xl sm:text-5xl font-extrabold text-customBg text-center mb-12'
+          className='text-3xl md:text-5xl leading-normal text-center font-extrabold tracking-tight text-gray-100 mb-12'
           data-aos='zoom-in'
         >
-          Job Visa Counselling Services
+          Job Visa <span className="text-customBg">Counselling Services</span>
         </h1>
         <div className='grid gap-12 lg:grid-cols-2'>
           {/* Countries List */}
@@ -58,7 +58,7 @@ const JobVisaCounselling = () => {
               {countries.map((country, index) => (
                 <li
                   key={index}
-                  className='transition transform hover:scale-105 hover:text-yellow-200 duration-300 ease-in-out'
+                  className='transition transform hover:scale-105 hover:text-customBg duration-300 ease-in-out'
                 >
                   {country}
                 </li>
@@ -79,7 +79,7 @@ const JobVisaCounselling = () => {
               {jobVacancies.map((job, index) => (
                 <li
                   key={index}
-                  className='transition transform hover:scale-105 hover:text-yellow-200 duration-300 ease-in-out'
+                  className='transition transform hover:scale-105 hover:text-customBg duration-300 ease-in-out'
                 >
                   {job}
                 </li>
@@ -100,7 +100,7 @@ const JobVisaCounselling = () => {
               {documents.map((document, index) => (
                 <li
                   key={index}
-                  className='transition transform hover:scale-105 hover:text-yellow-200 duration-300 ease-in-out'
+                  className='transition transform hover:scale-105 hover:text-customBg duration-300 ease-in-out'
                 >
                   {document}
                 </li>
@@ -121,7 +121,7 @@ const JobVisaCounselling = () => {
               {facilities.map((facility, index) => (
                 <li
                   key={index}
-                  className='transition transform hover:scale-105 hover:text-yellow-200 duration-300 ease-in-out'
+                  className='transition transform hover:scale-105 hover:text-customBg duration-300 ease-in-out'
                 >
                   {facility}
                 </li>

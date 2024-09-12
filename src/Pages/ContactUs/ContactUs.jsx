@@ -60,20 +60,20 @@ const ContactUs = () => {
                 </h2>
                 <a
                   href='mailto:neweraconsultancy29@gmail.com '
-                  className='text-red-500 leading-relaxed'
+                  className='text-customBg leading-relaxed'
                 >
                   neweraconsultancy29@gmail.com
                 </a>
                 <h2 className='title-font font-semibold text-gray-900 tracking-widest text-xs mt-4'>
                   PHONE
                 </h2>
-                <p className='leading-relaxed'>123-456-7890</p>
+                <p className='leading-relaxed'>+880 1717155730</p>
               </div>
             </div>
           </div>
           <div className='lg:w-1/3 md:w-1/2 bg-white flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0'>
             <h2 className='text-gray-900 text-xl mb-1 font-medium title-font'>
-              Get in Touch with Us!
+              Get in <span className="text-customBg">Touch with Us!</span>
             </h2>
             <p className='leading-relaxed mb-5 lg text-gray-600'>
               We&apos;re here to help and answer any question you might have. We
@@ -128,7 +128,7 @@ const ContactUs = () => {
             </div>
             <button
               type='submit'
-              className='text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded text-lg'
+              className='text-white bg-customBg border-0 py-2 px-6 focus:outline-none hover:bg-orange-400 rounded text-lg'
             >
               Submit
             </button>

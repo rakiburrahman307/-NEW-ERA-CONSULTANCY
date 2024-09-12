@@ -3,7 +3,7 @@ import { Parallax } from "react-parallax";
 import img2 from "../../../assets/banner/2.jpg";
 import img3 from "../../../assets/banner/3.jpg";
 import img4 from "../../../assets/banner/4.jpg";
-import img5 from "../../../assets/banner/5.jpg";
+import img7 from "../../../assets/banner/7.jpg";
 
 const OurMissionVision = () => {
   // State to track if images are loaded
@@ -22,17 +22,17 @@ const OurMissionVision = () => {
     <section>
       <Parallax
         blur={{ min: -1, max: 3 }}
-        bgImage={img5}
+        bgImage={img7}
         bgImageAlt='Vision Background'
         strength={500}
         className='mt-10'
       >
         <div className='container mx-auto px-4 sm:px-6 lg:px-5'>
           <h2
-            className='text-3xl sm:text-5xl text-customBg font-bold text-center mt-16 mb-10'
+            className='text-3xl md:text-5xl text-center leading-normal font-extrabold tracking-tight text-gray-100 mt-14 mb-12'
             data-aos='zoom-in'
           >
-            Why Choose Us
+            Why <span className="text-customBg">Choose Us</span>
           </h2>
 
           {/* Section 2: Right Content, Left Image */}
