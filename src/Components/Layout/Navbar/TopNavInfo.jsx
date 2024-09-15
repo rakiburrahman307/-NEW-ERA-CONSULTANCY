@@ -22,7 +22,7 @@ const TopNavInfo = () => {
       role='banner'
     >
       <div className='max-w-[1440px] flex items-center justify-between mx-auto'>
-        <h3 className='text-base text-black font-bold'>
+        <h3 className='text-sm text-black font-bold'>
           Contact Us: +880 01717155730
         </h3>
         <div className='flex justify-center items-center'>

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import imgCeo from "../../../assets/team_member/ceo.jpg";
-import imgCharman from "../../../assets/team_member/charman.jpg";
+import imgChairman from "../../../assets/team_member/chairman.jpg";
 import imgDirector from "../../../assets/team_member/director.jpg";
 import imgDirector_2 from "../../../assets/team_member/director_abdullah.jpg";
 
@@ -8,23 +8,27 @@ import imgDirector_2 from "../../../assets/team_member/director_abdullah.jpg";
 const teamMembers = [
   {
     name: "Jakia Akter Shumi",
-    role: "Charman",
-    imgSrc: imgCharman,
+    role: "Chairman",
+    imgSrc: imgChairman,
+    link: "https://www.facebook.com/profile.php?id=100017451935643&mibextid=ZbWKwL",
   },
   {
     name: "Md. Taiful Islam",
     role: "CEO",
     imgSrc: imgCeo,
+    link: "https://www.facebook.com/taiful.islam.775?mibextid=ZbWKwL",
   },
   {
     name: "Md. Afran Rahman Tonmoy",
     role: "Director",
     imgSrc: imgDirector,
+    link: "https://www.facebook.com/afranrahman.tonmoy?mibextid=ZbWKwL",
   },
   {
     name: "Abdullah Al Mamun",
     role: "Director",
     imgSrc: imgDirector_2,
+    link: "https://www.facebook.com/profile.php?id=100010572273280&mibextid=ZbWKwL",
   },
 ];
 
@@ -61,7 +65,10 @@ const OurTeam = () => {
               loading='lazy'
             />
             <a
-              href='#'
+              href={member?.link}
+              target='_blank'
+              rel='noopener noreferrer'
+              aria-label='Facebook'
               className='hover:text-customBg text-gray-900 font-semibold'
             >
               {member?.name}

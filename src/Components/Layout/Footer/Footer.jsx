@@ -86,7 +86,7 @@ const Footer = () => {
           <h4 className='text-sm'>
             &copy; 2024 New Era Consultancy. All Rights Reserved.
           </h4>
-          <p className='text-xs mt-2'>
+          <p className='text-xs mt-2 text-gray-400'>
             Designed and crafted with <span className='text-gray-50'>💙</span>{" "}
             by Rakibur Rahman.
           </p>

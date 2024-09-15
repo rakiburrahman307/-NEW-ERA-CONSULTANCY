@@ -7,7 +7,7 @@ const OurObjective = () => {
         <h2 className="text-3xl md:text-5xl text-center leading-normal font-extrabold tracking-tight text-gray-100 mb-12" data-aos="zoom-in">
           Our <span className='text-customBg'>Objective</span>
         </h2>
-        <div className="bg-gradient-to-l from-slate-700 to-slate-900 p-8 rounded-lg shadow-lg relative">
+        <div className="bg-gradient-to-l from-slate-700 to-slate-900 p-8 rounded-lg shadow-lg relative min-h-[600px] md:min-h-[550px]">
           <TypeAnimation
             style={{ whiteSpace: 'pre-line', display: 'block' }}
             sequence={[
@@ -21,7 +21,7 @@ const OurObjective = () => {
             repeat={Infinity}
             deletionSpeed={90}
             omitDeletionAnimation={true}
-            className="text-xl text-white min-h-96 md:min-h-[450px]"
+            className="text-xl text-white"
           />
         </div>
       </div>
